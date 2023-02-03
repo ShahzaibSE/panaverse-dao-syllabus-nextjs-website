@@ -16,26 +16,32 @@ import {
   Link,
   HStack,
 } from "@chakra-ui/react";
+import MobileDrawer from "./mobile_drawer";
 
-const CTA = "Get Started";
+const CTA = "Apply";
 
 export default function Header() {
   const data = ["About", "Contact Us", "Web3"];
   return (
     <chakra.header id="header">
       <Flex w="100%" px="6" py="5" align="center" justify="space-between">
-        <Image src="assets/panaverse-logo/panaverse80_80.jpg" h="50px" alt="Panaverse DAO"/>
+          <Image
+            src="assets/panaverse_dao_no_background.png"
+            h="100px"
+            alt="Panaverse DAO"
+          />
 
-        <HStack as="nav" spacing="5">
-          {data.map((item: any, i: number) => (
-            <Link key={i}>
-              <Button variant="nav"> {item} </Button>
-            </Link>
-          ))}
-        </HStack>
-        <HStack>
-          <Button>{CTA}</Button>
-        </HStack>
+          <HStack as="nav" spacing="5" display={{ base: "none", md: "flex" }}>
+            {data.map((item: any, i: number) => (
+              <Link key={i}>
+                <Button variant="nav"> {item} </Button>
+              </Link>
+            ))}
+          </HStack>
+          <HStack>
+            <Button>{CTA}</Button>
+            <MobileDrawer/>
+          </HStack>
       </Flex>
     </chakra.header>
   );
