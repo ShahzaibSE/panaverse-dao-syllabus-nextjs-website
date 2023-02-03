@@ -4,7 +4,7 @@ export default function Head() {
       <title>Panaverse DAO</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta name="description" content="Panaverse DAO Syllabus" />
-      <link rel="icon" href="assets/panaverse_dao.ico" />
+      <link rel="icon" href="panaverse_dao.ico" />
     </>
   )
 }
