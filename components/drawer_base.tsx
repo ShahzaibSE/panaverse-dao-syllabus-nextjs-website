@@ -11,6 +11,8 @@ import {
   DrawerCloseButton,
   Flex,
   Text,
+  Image,
+  Center,
 } from "@chakra-ui/react";
 
 export default function DrawerBase({
@@ -36,7 +38,13 @@ export default function DrawerBase({
         <DrawerContent alignItems="center">
           <DrawerCloseButton alignSelf="end" mx={p} my={p} />
           <DrawerHeader my={p}>
-            <Text as="p"> {title} </Text>
+            {/* <Text as="p"> {title} </Text> */}
+            <Center>
+              <Image
+                src="assets/panaverse-logo/panaverse_transparent_small.png"
+                alt="Panaverse DAO"
+              />
+            </Center>
           </DrawerHeader>
           <DrawerBody>{children}</DrawerBody>
           <DrawerFooter>{footer}</DrawerFooter>
