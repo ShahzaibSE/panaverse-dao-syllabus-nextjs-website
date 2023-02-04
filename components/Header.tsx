@@ -36,7 +36,7 @@ export default function Header() {
 
           <HStack as="nav" spacing="5" display={{ base: "none", md: "flex" }}>
             {data.map((item: any, i: number) => (
-              <Link key={i}>
+              <Link key={i} fontSize={['xs','sm', 'md', 'lg', 'xl']}>
                 <Button variant="nav"> {item} </Button>
               </Link>
             ))}
