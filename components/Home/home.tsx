@@ -12,8 +12,10 @@ import {
   Button,
   Container,
   Image,
+  Spacer,
+  AspectRatio,
 } from "@chakra-ui/react";
-import {} from "@chakra-ui/icons";
+import { InfoIcon } from "@chakra-ui/icons";
 
 export default function HomePage() {
   return (
@@ -38,12 +40,17 @@ export default function HomePage() {
           </Box>
           <Box px={[10, 20]} py={10}>
             <Container>
-              <Button colorScheme="green" size={["md", "lg"]}>
-                Explore
+              <Button
+                colorScheme="green"
+                size={["md", "lg"]}
+                rightIcon={<InfoIcon />}
+              >
+                Explore Course
               </Button>
             </Container>
           </Box>
         </Stack>
+        <Spacer />
       </Flex>
     </Box>
   );

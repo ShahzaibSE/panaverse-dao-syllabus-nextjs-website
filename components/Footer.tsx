@@ -34,7 +34,7 @@ import { ReactNode } from "react";
 // };
 const Logo = (props: any) => {
   return (
-    <HStack>
+    <HStack pt={20}>
       <Box><Text fontSize={['xs','sm', 'md', 'lg', 'xl']}>Powered by</Text></Box>
       <Box><Image h={[30, 40, 50]} src="assets/panacloud-logo.png" alt="Panaverse DAO"/></Box>
     </HStack>
