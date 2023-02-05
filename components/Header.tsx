@@ -32,12 +32,12 @@ export default function Header() {
           <HStack as="nav" spacing="5" display={{ base: "none", md: "flex" }}>
             {data.map((item: any, i: number) => (
               <Link key={i} fontSize={['xs','sm', 'md', 'lg', 'xl']}>
-                <Button variant="nav" rightIcon={<ExternalLinkIcon/>}> {item} </Button>
+                <Button variant="nav"> {item} </Button>
               </Link>
             ))}
           </HStack>
           <HStack>
-            <Button>{CTA}</Button>
+            <Button rightIcon={<ExternalLinkIcon/>}>{CTA}</Button>
             <MobileDrawer/>
           </HStack>
       </Flex>
