@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HomePage from "@/components/Home/home";
 //
-import { Box, Wrap, Flex } from "@chakra-ui/react";
+import { Box, Wrap, Flex, Text } from "@chakra-ui/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +18,7 @@ export default function Home() {
         <Header />
       </header>
       <main>
-
+        <HomePage />
       </main>
       <footer>
         <Footer/>
