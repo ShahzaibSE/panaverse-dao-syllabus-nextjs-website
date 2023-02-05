@@ -37,7 +37,7 @@ export default function Header() {
             ))}
           </HStack>
           <HStack>
-            <Button size={"md"} colorScheme='twitter' rightIcon={<ExternalLinkIcon/>}>{CTA}</Button>
+            <Button size={"md"} colorScheme='telegram' rightIcon={<ExternalLinkIcon/>}>{CTA}</Button>
             <MobileDrawer/>
           </HStack>
       </Flex>
