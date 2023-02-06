@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
+import { Zoom } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 //
 import {
   Box,
@@ -18,13 +20,14 @@ import {
   CardBody,
   CardHeader,
   CardFooter,
+  AspectRatio,
 } from "@chakra-ui/react";
 import { InfoIcon } from "@chakra-ui/icons";
 
 const CourseContainer = (props: any) => {
   const { name, description, colorName } = props;
   return (
-    <Card p={10} maxW='md' maxH="lg" backgroundColor={colorName}>
+    <Card p={10} maxW="md" maxH="lg" backgroundColor={colorName}>
       <CardHeader>
         <Container>
           <Heading fontSize={["lg", "xl", "2xl"]} size="md">
@@ -42,14 +45,20 @@ const CourseContainer = (props: any) => {
 };
 
 export default function HomePage() {
+  const images = [
+    "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+    "https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80",
+    "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+  ];
   return (
     <Box>
       <Box
         bgGradient="linear(135deg, #8BC6EC 0%, #9599E2 100%)"
         maxH={["lg", "xl"]}
-        py={20} px={10}
+        py={20}
+        px={10}
       >
-        <Flex>
+        <Flex direction={["column", "row"]}>
           <Stack direction="column">
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
@@ -102,9 +111,21 @@ export default function HomePage() {
             </motion.div>
           </Stack>
           <Spacer />
+          <Box my={10} mx={10} boxSize={["md", "lg", "xl"]}>
+            <Zoom scale={1.4} indicators={true}>
+              {images.map((each, index) => (
+                <div key={index} style={{ width: "100%" }}>
+                  <Image
+                    style={{ objectFit: "cover", width: "100%" }}
+                    alt="Slide Image"
+                    src={each}
+                  />
+                </div>
+              ))}
+            </Zoom>
+          </Box>
         </Flex>
       </Box>
-      <br/>
       <Box my={10}>
         <Flex direction="column">
           <motion.div
@@ -113,8 +134,11 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
           >
             <Box p={20}>
-              <Heading textAlign="center" fontSize={["xl", "2xl", "3xl", "4xl"]}>
-                Core Courses
+              <Heading
+                textAlign="center"
+                fontSize={["xl", "2xl", "3xl", "4xl"]}
+              >
+                Core <span color="blue">Courses</span>
               </Heading>
             </Box>
           </motion.div>
@@ -141,7 +165,7 @@ export default function HomePage() {
                     name="Quarter II (Core)"
                     description="W2-201: Developing Planet-Scale Web 2.0 Serverless Cloud 
                   Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform"
-                  colorName="yellow.200"
+                    colorName="yellow.200"
                   />
                 </motion.div>
                 <motion.div
