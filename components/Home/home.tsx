@@ -46,7 +46,8 @@ export default function HomePage() {
     <Box>
       <Box
         bgGradient="linear(135deg, #8BC6EC 0%, #9599E2 100%)"
-        minHeight="40%"
+        maxH={["lg", "xl"]}
+        py={20} px={10}
       >
         <Flex>
           <Stack direction="column">
@@ -103,6 +104,7 @@ export default function HomePage() {
           <Spacer />
         </Flex>
       </Box>
+      <br/>
       <Box my={10}>
         <Flex direction="column">
           <motion.div
@@ -111,7 +113,7 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
           >
             <Box p={20}>
-              <Heading textAlign="center" fontSize={["lg", "xl", "2xl"]}>
+              <Heading textAlign="center" fontSize={["xl", "2xl", "3xl", "4xl"]}>
                 Core Courses
               </Heading>
             </Box>
