@@ -76,7 +76,7 @@ const SocialButton = ({
 export default function Footer() {
   return (
     <Box
-      style={{ position: "fixed", bottom: "0px", left: "0px", right: "0px" }}
+      style={{ position: "relative", bottom: "0px", left: "0px", right: "0px" }}
       bg={useColorModeValue("black.50", "black.900")}
       color={useColorModeValue("black.700", "black.200")}
       mt={20}
