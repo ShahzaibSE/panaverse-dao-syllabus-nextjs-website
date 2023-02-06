@@ -18,19 +18,24 @@ import {
   CardBody,
   CardHeader,
   CardFooter,
-  Center,
 } from "@chakra-ui/react";
 import { InfoIcon } from "@chakra-ui/icons";
 
 const CourseContainer = (props: any) => {
-  const { name, description } = props;
+  const { name, description, colorName } = props;
   return (
-    <Card>
+    <Card p={10} maxW='md' maxH="lg" backgroundColor={colorName}>
       <CardHeader>
-        <Heading size="md">{name}</Heading>
+        <Container>
+          <Heading fontSize={["lg", "xl", "2xl"]} size="md">
+            {name}
+          </Heading>
+        </Container>
       </CardHeader>
       <CardBody>
-        <Text>{description}</Text>
+        <Container>
+          <Text fontSize={["xs", "sm", "md", "lg"]}>{description}</Text>
+        </Container>
       </CardBody>
     </Card>
   );
@@ -113,25 +118,42 @@ export default function HomePage() {
           </motion.div>
           <Box>
             <Flex justify={"center"} alignItems="center">
-              <SimpleGrid
-                column={1}
-                spacing={10}
-                templateColumns="repeat(auto-fill, minmax(200px, 1fr))"
-              >
-                <CourseContainer
-                  name="Quarter I (Core)"
-                  description="CS-101: Object-Oriented Programming using TypeScript"
-                />
-                <CourseContainer
-                  name="Quarter II (Core)"
-                  description="W2-201: Developing Planet-Scale Web 2.0 Serverless Cloud 
+              <Stack direction={["column", "row"]}>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <CourseContainer
+                    name="Quarter I (Core)"
+                    description="CS-101: Object-Oriented Programming using TypeScript"
+                    colorName="red.200"
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <CourseContainer
+                    name="Quarter II (Core)"
+                    description="W2-201: Developing Planet-Scale Web 2.0 Serverless Cloud 
                   Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform"
-                />
-                <CourseContainer
-                  name="Quarter III (Core)"
-                  description="$-101: Dollar Making Bootcamp - Full-Stack Template and API Product Development"
-                />
-              </SimpleGrid>
+                  colorName="yellow.200"
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <CourseContainer
+                    name="Quarter III (Core)"
+                    description="$-101: Dollar Making Bootcamp - Full-Stack Template and API Product Development"
+                    colorName="green.200"
+                  />
+                </motion.div>
+              </Stack>
             </Flex>
           </Box>
         </Flex>

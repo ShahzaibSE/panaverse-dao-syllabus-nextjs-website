@@ -11,7 +11,7 @@ import MobileDrawer from "./mobile_drawer";
 const CTA = "Apply";
 
 export default function Header() {
-  const data = ["About", "Contact Us", "Web3"];
+  const data = ["About", "Contact Us", "Courses"];
   return (
     <chakra.header id="header">
       <motion.div
