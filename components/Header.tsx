@@ -37,7 +37,7 @@ export default function Header() {
           </HStack>
           <HStack>
             <Button
-              size={"md"}
+              size={["sm", "md", "lg"]}
               colorScheme="telegram"
               rightIcon={<ExternalLinkIcon />}
             >

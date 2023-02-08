@@ -21,8 +21,10 @@ import {
   CardHeader,
   CardFooter,
   AspectRatio,
+  WrapItem,
 } from "@chakra-ui/react";
 import { InfoIcon } from "@chakra-ui/icons";
+import { wrap } from "module";
 
 const CourseContainer = (props: any) => {
   const { name, description, colorName } = props;
@@ -44,6 +46,23 @@ const CourseContainer = (props: any) => {
   );
 };
 
+const responsiveSettings = [
+  {
+    breakpoint: 800,
+    settings: {
+      slidesToShow: 3,
+      slidesToScroll: 3,
+    },
+  },
+  {
+    breakpoint: 500,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 2,
+    },
+  },
+];
+
 export default function HomePage() {
   const images = [
     "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
@@ -58,7 +77,7 @@ export default function HomePage() {
         py={20}
         px={10}
       >
-        <Flex direction={["column", "row"]}>
+        <Flex>
           <Stack direction="column">
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
@@ -110,20 +129,34 @@ export default function HomePage() {
               </Box>
             </motion.div>
           </Stack>
-          <Spacer />
-          <Box my={10} mx={10} boxSize={["md", "lg", "xl"]}>
-            <Zoom scale={1.4} indicators={true}>
-              {images.map((each, index) => (
-                <div key={index} style={{ width: "100%" }}>
-                  <Image
-                    style={{ objectFit: "cover", width: "100%" }}
-                    alt="Slide Image"
-                    src={each}
-                  />
-                </div>
-              ))}
-            </Zoom>
-          </Box>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Box my={10} mx={10}>
+              <Image src="assets/piaic-logo.png" alt="PIAIC" h={[200, 400, 600]}/>
+            </Box>
+          </motion.div>
+          {/* <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Box my={10} mx={10} boxSize={["md", "lg", "xl"]} display={{ base: "none", md: "flex" }}>
+                <Zoom scale={1.4} indicators={true} arrows={false}>
+                  {images.map((each, index) => (
+                    <div key={index} style={{ width: "100%" }}>
+                      <Image
+                        style={{ objectFit: "cover", width: "100%" }}
+                        alt="Slide Image"
+                        src={each}
+                      />
+                    </div>
+                  ))}
+                </Zoom>
+              </Box>
+            </motion.div> */}
         </Flex>
       </Box>
       <Box my={10}>
