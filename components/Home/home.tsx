@@ -22,6 +22,7 @@ import {
   CardFooter,
   AspectRatio,
   WrapItem,
+  Center,
 } from "@chakra-ui/react";
 import { InfoIcon } from "@chakra-ui/icons";
 import { wrap } from "module";
@@ -29,7 +30,7 @@ import { wrap } from "module";
 const CourseContainer = (props: any) => {
   const { name, description, colorName } = props;
   return (
-    <Card p={10} maxW="md" maxH="lg" backgroundColor={colorName}>
+    <Card p={10} maxW="md" maxH="lg" backgroundColor={colorName} boxSize={["xs","sm", "md"]}>
       <CardHeader>
         <Container>
           <Heading fontSize={["lg", "xl", "2xl"]} size="md">
@@ -71,74 +72,75 @@ export default function HomePage() {
   ];
   return (
     <Box>
-      <Box
+      <Flex
         bgGradient="linear(135deg, #8BC6EC 0%, #9599E2 100%)"
         maxH={["lg", "xl"]}
         py={20}
         px={10}
       >
-        <Flex>
-          <Stack direction="column">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Box pt={[10, 20]} px={[10, 20]}>
-                <Container>
-                  <Heading textAlign="left" fontSize={["lg", "xl", "2xl"]}>
-                    Certified Web 3.0 and Metaverse Developer
-                  </Heading>
-                </Container>
-              </Box>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Box pt={10} px={[10, 20]}>
-                <Container>
-                  <Text
-                    as="p"
-                    textAlign="left"
-                    fontSize={["xs", "sm", "md", "lg"]}
-                  >
-                    Consolidating Web 3.0, Metaverse, Artificial Intelligence
-                    (AI), Cloud, Edge, Ambient Computing/IoT, Network
-                    Automation, and Bioinformatics Technologies
-                  </Text>
-                </Container>
-              </Box>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Box px={[10, 20]} py={10}>
-                <Container>
-                  <Button
-                    colorScheme="green"
-                    size={["md", "lg"]}
-                    rightIcon={<InfoIcon />}
-                  >
-                    Explore Course
-                  </Button>
-                </Container>
-              </Box>
-            </motion.div>
-          </Stack>
+        <Stack direction="column">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <Box my={10} mx={10}>
-              <Image src="assets/piaic-logo.png" alt="PIAIC" h={[200, 400, 600]}/>
+            <Box pt={[10, 20]} px={[10, 20]}>
+              <Container>
+                <Heading textAlign="left" fontSize={["lg", "xl", "2xl"]}>
+                  Certified Web 3.0 and Metaverse Developer
+                </Heading>
+              </Container>
             </Box>
           </motion.div>
-          {/* <motion.div
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Box pt={10} px={[10, 20]}>
+              <Container>
+                <Text
+                  as="p"
+                  textAlign="left"
+                  fontSize={["xs", "sm", "md", "lg"]}
+                >
+                  Consolidating Web 3.0, Metaverse, Artificial Intelligence
+                  (AI), Cloud, Edge, Ambient Computing/IoT, Network Automation,
+                  and Bioinformatics Technologies
+                </Text>
+              </Container>
+            </Box>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Box px={[10, 20]} py={10}>
+              <Container>
+                <Button
+                  colorScheme="green"
+                  size={["md", "lg"]}
+                  rightIcon={<InfoIcon />}
+                >
+                  Explore Course
+                </Button>
+              </Container>
+            </Box>
+          </motion.div>
+        </Stack>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Box my={10} mx={20} boxSize="xs" display={{ base: "none", md: "flex" }}>
+            <Center>
+              <Image src="assets/piaic-logo.png" alt="PIAIC" h={400} w={400} />
+            </Center>
+          </Box>
+        </motion.div>
+        {/* <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
@@ -157,66 +159,60 @@ export default function HomePage() {
                 </Zoom>
               </Box>
             </motion.div> */}
-        </Flex>
-      </Box>
-      <Box my={10}>
-        <Flex direction="column">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Box p={20}>
-              <Heading
-                textAlign="center"
-                fontSize={["xl", "2xl", "3xl", "4xl"]}
-              >
-                Core <span color="blue">Courses</span>
-              </Heading>
-            </Box>
-          </motion.div>
-          <Box>
-            <Flex justify={"center"} alignItems="center">
-              <Stack direction={["column", "row"]}>
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <CourseContainer
-                    name="Quarter I (Core)"
-                    description="CS-101: Object-Oriented Programming using TypeScript"
-                    colorName="red.200"
-                  />
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <CourseContainer
-                    name="Quarter II (Core)"
-                    description="W2-201: Developing Planet-Scale Web 2.0 Serverless Cloud 
-                  Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform"
-                    colorName="yellow.200"
-                  />
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <CourseContainer
-                    name="Quarter III (Core)"
-                    description="$-101: Dollar Making Bootcamp - Full-Stack Template and API Product Development"
-                    colorName="green.200"
-                  />
-                </motion.div>
-              </Stack>
-            </Flex>
+      </Flex>
+      <Flex direction="column" my={10}>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Box p={20}>
+            <Heading textAlign="center" fontSize={["xl", "2xl", "3xl", "4xl"]}>
+              Core <span color="blue">Courses</span>
+            </Heading>
           </Box>
-        </Flex>
-      </Box>
+        </motion.div>
+        <Box>
+          <Flex justify={"center"} alignItems="center">
+            <Stack direction={["column", "row"]}>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <CourseContainer
+                  name="Quarter I (Core)"
+                  description="CS-101: Object-Oriented Programming using TypeScript"
+                  colorName="red.200"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <CourseContainer
+                  name="Quarter II (Core)"
+                  description="W2-201: Developing Planet-Scale Web 2.0 Serverless Cloud 
+                  Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform"
+                  colorName="yellow.200"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <CourseContainer
+                  name="Quarter III (Core)"
+                  description="$-101: Dollar Making Bootcamp - Full-Stack Template and API Product Development"
+                  colorName="green.200"
+                />
+              </motion.div>
+            </Stack>
+          </Flex>
+        </Box>
+      </Flex>
     </Box>
   );
 }
