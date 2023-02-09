@@ -27,10 +27,16 @@ import {
 import { InfoIcon } from "@chakra-ui/icons";
 import { wrap } from "module";
 
-const CourseContainer = (props: any) => {
+export const CourseContainer = (props: any) => {
   const { name, description, colorName } = props;
   return (
-    <Card p={10} maxW="md" maxH="lg" backgroundColor={colorName} boxSize={["xs","sm", "md"]}>
+    <Card
+      p={10}
+      maxW="md"
+      maxH="lg"
+      backgroundColor={colorName}
+      boxSize={["xs", "sm", "md"]}
+    >
       <CardHeader>
         <Container>
           <Heading fontSize={["lg", "xl", "2xl"]} size="md">
@@ -134,7 +140,12 @@ export default function HomePage() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <Box my={10} mx={20} boxSize="xs" display={{ base: "none", md: "flex" }}>
+          <Box
+            my={10}
+            mx={20}
+            boxSize="xs"
+            display={{ base: "none", md: "flex" }}
+          >
             <Center>
               <Image src="assets/piaic-logo.png" alt="PIAIC" h={400} w={400} />
             </Center>
@@ -167,7 +178,7 @@ export default function HomePage() {
           transition={{ duration: 0.5 }}
         >
           <Box p={20}>
-            <Heading textAlign="center" fontSize={["xl", "2xl", "3xl", "4xl"]}>
+            <Heading textAlign="center" fontSize={["2xl", "3xl", "4xl"]}>
               Core <span color="blue">Courses</span>
             </Heading>
           </Box>
@@ -211,6 +222,38 @@ export default function HomePage() {
               </motion.div>
             </Stack>
           </Flex>
+        </Box>
+      </Flex>
+      <Flex direction="column" my={20}>
+        <Box pt={10} px={10}>
+          <Heading
+            as={"h3"}
+            textAlign="center"
+            fontSize={["xl","2xl", "3xl"]}
+            size="lg"
+            lineHeight={2}
+          >
+            The Program in a Nutshell
+          </Heading>
+          <Heading
+            as={"h3"}
+            textAlign="center"
+            fontSize={["lg", "xl", "2xl"]}
+            size="sm"
+            color={"blue.300"}
+          >
+            Earn While You Learn
+          </Heading>
+        </Box>
+        <Box pt={10} px={10}>
+          <Container>
+            <Text as="p" textAlign={"justify"} fontSize={["xs", "sm", "md", "lg"]}>
+              In this brand-new type of curriculum, students will learn how to
+              make money and boost exports in the classroom and will begin doing
+              so within six months of the program beginning. It resembles a
+              cross between a corporate venture and an educational project.
+            </Text>
+          </Container>
         </Box>
       </Flex>
     </Box>
