@@ -1,6 +1,14 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef, useEffect } from "react";
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  MotionValue,
+  useAnimation,
+  useInView,
+} from "framer-motion";
 import { Zoom } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 //
@@ -70,12 +78,36 @@ const responsiveSettings = [
   },
 ];
 
+export const customAnimations = {
+  zoomInAnimation: { opacity: 1, scale: 1 },
+};
+
+// Parallax Scroll Configuration
+export function useParallax(value: MotionValue<number>, distance: number) {
+  return useTransform(value, [0, 1], [-distance, distance]);
+}
+
 export default function HomePage() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref });
+  const y = useParallax(scrollYProgress, 300);
+  // Fade In Entrance.
+  const controls = useAnimation();
+  const inView = useInView(ref);
+
+  //
   const images = [
     "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     "https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80",
     "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
   ];
+  //
+  useEffect(() => {
+    if (inView) {
+      // controls.start("visible");
+      controls.start({ opacity: 1, scale: 1 });
+    }
+  }, [controls, inView]);
   return (
     <Box>
       <Flex
@@ -87,8 +119,9 @@ export default function HomePage() {
         <Stack direction="column">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={customAnimations.zoomInAnimation}
             transition={{ duration: 0.5 }}
+            ref={ref}
           >
             <Box pt={[10, 20]} px={[10, 20]}>
               <Container>
@@ -100,8 +133,9 @@ export default function HomePage() {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={customAnimations.zoomInAnimation}
             transition={{ duration: 0.5 }}
+            ref={ref}
           >
             <Box pt={10} px={[10, 20]}>
               <Container>
@@ -119,8 +153,9 @@ export default function HomePage() {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={customAnimations.zoomInAnimation}
             transition={{ duration: 0.5 }}
+            ref={ref}
           >
             <Box px={[10, 20]} py={10}>
               <Container>
@@ -137,8 +172,9 @@ export default function HomePage() {
         </Stack>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
+          whileInView={customAnimations.zoomInAnimation}
           transition={{ duration: 0.5 }}
+          ref={ref}
         >
           <Box
             my={10}
@@ -174,8 +210,9 @@ export default function HomePage() {
       <Flex direction="column" my={10}>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
+          whileInView={customAnimations.zoomInAnimation}
           transition={{ duration: 0.5 }}
+          ref={ref}
         >
           <Box p={20}>
             <Heading textAlign="center" fontSize={["2xl", "3xl", "4xl"]}>
@@ -188,8 +225,9 @@ export default function HomePage() {
             <Stack direction={["column", "row"]}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
+                whileInView={customAnimations.zoomInAnimation}
                 transition={{ duration: 0.5 }}
+                ref={ref}
               >
                 <CourseContainer
                   name="Quarter I (Core)"
@@ -199,8 +237,9 @@ export default function HomePage() {
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
+                whileInView={customAnimations.zoomInAnimation}
                 transition={{ duration: 0.5 }}
+                ref={ref}
               >
                 <CourseContainer
                   name="Quarter II (Core)"
@@ -211,8 +250,9 @@ export default function HomePage() {
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
+                whileInView={customAnimations.zoomInAnimation}
                 transition={{ duration: 0.5 }}
+                ref={ref}
               >
                 <CourseContainer
                   name="Quarter III (Core)"
@@ -225,36 +265,56 @@ export default function HomePage() {
         </Box>
       </Flex>
       <Flex direction="column" my={20}>
-        <Box pt={10} px={10}>
-          <Heading
-            as={"h3"}
-            textAlign="center"
-            fontSize={["xl","2xl", "3xl"]}
-            size="lg"
-            lineHeight={2}
-          >
-            The Program in a Nutshell
-          </Heading>
-          <Heading
-            as={"h3"}
-            textAlign="center"
-            fontSize={["lg", "xl", "2xl"]}
-            size="sm"
-            color={"blue.300"}
-          >
-            Earn While You Learn
-          </Heading>
-        </Box>
-        <Box pt={10} px={10}>
-          <Container>
-            <Text as="p" textAlign={"justify"} fontSize={["xs", "sm", "md", "lg"]}>
-              In this brand-new type of curriculum, students will learn how to
-              make money and boost exports in the classroom and will begin doing
-              so within six months of the program beginning. It resembles a
-              cross between a corporate venture and an educational project.
-            </Text>
-          </Container>
-        </Box>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={customAnimations.zoomInAnimation}
+          transition={{ duration: 0.5 }}
+          ref={ref}
+        >
+          <Box pt={10} px={10}>
+            <Heading
+              as={"h3"}
+              textAlign="center"
+              fontSize={["xl", "2xl", "3xl"]}
+              size="lg"
+              lineHeight={2}
+            >
+              The Program in a Nutshell
+            </Heading>
+            <Heading
+              as={"h3"}
+              textAlign="center"
+              fontSize={["lg", "xl", "2xl"]}
+              size="sm"
+              color={"blue.300"}
+            >
+              Earn While You Learn
+            </Heading>
+          </Box>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={customAnimations.zoomInAnimation}
+          // animate={controls}
+          transition={{ duration: 0.5 }}
+          ref={ref}
+        >
+          <Box pt={10} px={10}>
+            <Container>
+              <Text
+                as="p"
+                textAlign={"justify"}
+                fontSize={["xs", "sm", "md", "lg"]}
+              >
+                In this brand-new type of curriculum, students will learn how to
+                make money and boost exports in the classroom and will begin
+                doing so within six months of the program beginning. It
+                resembles a cross between a corporate venture and an educational
+                project.
+              </Text>
+            </Container>
+          </Box>
+        </motion.div>
       </Flex>
     </Box>
   );
