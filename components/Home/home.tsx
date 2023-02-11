@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useCallback } from "react";
 import {
   motion,
   useScroll,
@@ -11,6 +11,8 @@ import {
 } from "framer-motion";
 import { Zoom } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 //
 import {
   Box,
@@ -94,6 +96,18 @@ export default function HomePage() {
   // Fade In Entrance.
   const controls = useAnimation();
   const inView = useInView(ref);
+  //Particles
+  const particlesInit = useCallback(async (engine: any) => {
+    console.log(engine);
+    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async (container: any) => {
+    await console.log(container);
+  }, []);
 
   //
   const images = [
@@ -110,6 +124,38 @@ export default function HomePage() {
   }, [controls, inView]);
   return (
     <Box>
+      <Particles
+        init={particlesInit}
+        loaded={particlesLoaded}
+        ref={ref}
+        options={{
+          fpsLimit: 60,
+          particles: {
+            color: {
+              value: "#034f84"
+            },
+            move: {
+              bounce: false,
+              direction: "none",
+              enable: true,
+              outModes: "out",
+              random: false,
+              speed: 2,
+              straight: false,
+            },
+            number: { density: { enable: true, area: 800 }, value: 80 },
+            opacity: {
+              value: 0.5,
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              value: { min: 1, max: 5 },
+            },
+          },
+        }}
+      />
       <Flex
         bgGradient="linear(135deg, #8BC6EC 0%, #9599E2 100%)"
         maxH={["lg", "xl"]}
