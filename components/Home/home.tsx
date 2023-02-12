@@ -36,32 +36,7 @@ import {
 } from "@chakra-ui/react";
 import { InfoIcon } from "@chakra-ui/icons";
 import { wrap } from "module";
-
-export const CourseContainer = (props: any) => {
-  const { name, description, colorName } = props;
-  return (
-    <Card
-      p={10}
-      maxW="md"
-      maxH="lg"
-      backgroundColor={colorName}
-      boxSize={["xs", "sm", "md"]}
-    >
-      <CardHeader>
-        <Container>
-          <Heading fontSize={["lg", "xl", "2xl"]} size="md">
-            {name}
-          </Heading>
-        </Container>
-      </CardHeader>
-      <CardBody>
-        <Container>
-          <Text fontSize={["xs", "sm", "md", "lg"]}>{description}</Text>
-        </Container>
-      </CardBody>
-    </Card>
-  );
-};
+import { CourseContainer } from "../util";
 
 const responsiveSettings = [
   {
@@ -132,7 +107,7 @@ export default function HomePage() {
           fpsLimit: 60,
           particles: {
             color: {
-              value: "#034f84"
+              value: "#034f84",
             },
             move: {
               bounce: false,
@@ -360,6 +335,17 @@ export default function HomePage() {
               </Text>
             </Container>
           </Box>
+        </motion.div>
+      </Flex>
+      <Flex direction="column">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={customAnimations.zoomInAnimation}
+          // animate={controls}
+          transition={{ duration: 0.5 }}
+          ref={ref}
+        >
+          <Box></Box>
         </motion.div>
       </Flex>
     </Box>
