@@ -33,6 +33,10 @@ import {
   AspectRatio,
   WrapItem,
   Center,
+  List,
+  ListItem,
+  ListIcon,
+  UnorderedList,
 } from "@chakra-ui/react";
 import { InfoIcon } from "@chakra-ui/icons";
 import { wrap } from "module";
@@ -337,7 +341,7 @@ export default function HomePage() {
           </Box>
         </motion.div>
       </Flex>
-      <Flex direction="column">
+      <Flex direction={["column", "row"]} my={20}>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={customAnimations.zoomInAnimation}
@@ -345,7 +349,179 @@ export default function HomePage() {
           transition={{ duration: 0.5 }}
           ref={ref}
         >
-          <Box></Box>
+          <Box pt={10} px={10} mt={20}>
+            <Heading
+              as={"h3"}
+              textAlign="left"
+              fontSize={["xl", "2xl", "3xl"]}
+              size="lg"
+              lineHeight={2}
+            >
+              What is Web3?
+            </Heading>
+            <Text
+              as="p"
+              textAlign={"left"}
+              fontSize={["xs", "sm", "md", "lg"]}
+              py={10}
+            >
+              Web3 is an idea for a new iteration of the World Wide Web which
+              incorporates concepts such as decentralization, blockchain
+              technologies, and token-based economics.
+            </Text>
+            <UnorderedList>
+              <ListItem>
+                <Text
+                  as="p"
+                  fontSize={["xs", "sm", "md", "lg"]}
+                  lineHeight={10}
+                >
+                  Web3 is decentralized.
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text
+                  as="p"
+                  fontSize={["xs", "sm", "md", "lg"]}
+                  lineHeight={10}
+                >
+                  Web3 is permissionless.
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text
+                  as="p"
+                  fontSize={["xs", "sm", "md", "lg"]}
+                  lineHeight={10}
+                >
+                  Web3 has native payments.
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text
+                  as="p"
+                  fontSize={["xs", "sm", "md", "lg"]}
+                  lineHeight={10}
+                >
+                  Web3 is trustless.
+                </Text>
+              </ListItem>
+            </UnorderedList>
+          </Box>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={customAnimations.zoomInAnimation}
+          // animate={controls}
+          transition={{ duration: 0.5 }}
+          ref={ref}
+        >
+          <Box px={10} pt={10} mt={20}>
+            <Image src="assets/working-on-laptop.avif" alt="What is Web3?" />
+          </Box>
+        </motion.div>
+      </Flex>
+      <Flex direction={["column", "row"]}>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={customAnimations.zoomInAnimation}
+          // animate={controls}
+          transition={{ duration: 0.5 }}
+          ref={ref}
+        >
+          <Box pt={20} px={10}>
+            <Heading
+              as={"h3"}
+              textAlign="left"
+              fontSize={["xl", "2xl", "3xl"]}
+              size="lg"
+              lineHeight={2}
+            >
+              What is Metaverse?
+            </Heading>
+            <Text as="p" textAlign={"left"} fontSize={["xs", "sm", "md", "lg"]} py={10}>
+              A massively scaled and interoperable network of real time rendered
+              3D virtual worlds that can be experienced synchronously and
+              persistently by an effectively unlimited number of users with an
+              individual sense of presence, and with continuity of data.
+            </Text>
+            <UnorderedList>
+              <ListItem>
+                <Text
+                  as="p"
+                  fontSize={["xs", "sm", "md", "lg"]}
+                  lineHeight={10}
+                >
+                  Addressing remote work challenges.
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text
+                  as="p"
+                  fontSize={["xs", "sm", "md", "lg"]}
+                  lineHeight={10}
+                >
+                  Great tool for healthcare professionals.
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text
+                  as="p"
+                  fontSize={["xs", "sm", "md", "lg"]}
+                  lineHeight={10}
+                >
+                  Providing the experience of virtual tours.
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text
+                  as="p"
+                  fontSize={["xs", "sm", "md", "lg"]}
+                  lineHeight={10}
+                >
+                  Making online games more exciting.
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text
+                  as="p"
+                  fontSize={["xs", "sm", "md", "lg"]}
+                  lineHeight={10}
+                >
+                  Virtual work and learning spaces.
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text
+                  as="p"
+                  fontSize={["xs", "sm", "md", "lg"]}
+                  lineHeight={10}
+                >
+                  Virtual businesses and markets.
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text
+                  as="p"
+                  fontSize={["xs", "sm", "md", "lg"]}
+                  lineHeight={10}
+                >
+                  Expansion of social media platforms.
+                </Text>
+              </ListItem>
+            </UnorderedList>
+          </Box>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={customAnimations.zoomInAnimation}
+          // animate={controls}
+          transition={{ duration: 0.5 }}
+          ref={ref}
+        >
+          <Box px={10} py={20} mt={10} borderRadius={20}>
+            <Image src="assets/the-metaverse.jpeg" alt="What is Metaverse?" />
+          </Box>
         </motion.div>
       </Flex>
     </Box>
