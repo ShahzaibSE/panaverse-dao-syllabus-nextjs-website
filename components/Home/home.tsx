@@ -439,7 +439,12 @@ export default function HomePage() {
             >
               What is Metaverse?
             </Heading>
-            <Text as="p" textAlign={"left"} fontSize={["xs", "sm", "md", "lg"]} py={10}>
+            <Text
+              as="p"
+              textAlign={"left"}
+              fontSize={["xs", "sm", "md", "lg"]}
+              py={10}
+            >
               A massively scaled and interoperable network of real time rendered
               3D virtual worlds that can be experienced synchronously and
               persistently by an effectively unlimited number of users with an
@@ -521,6 +526,99 @@ export default function HomePage() {
         >
           <Box px={10} py={20} mt={10} borderRadius={20}>
             <Image src="assets/the-metaverse.jpeg" alt="What is Metaverse?" />
+          </Box>
+        </motion.div>
+      </Flex>
+      <Flex direction={["column", "row"]} justify="center" align="center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={customAnimations.zoomInAnimation}
+          // animate={controls}
+          transition={{ duration: 0.5 }}
+          ref={ref}
+        >
+          <Box pt={10} px={10} mt={20}>
+            <Container>
+              <Heading
+                as={"h3"}
+                textAlign="center"
+                fontSize={["xl", "2xl", "3xl"]}
+                size="lg"
+                lineHeight={2}
+              >
+                Shape Your{" "}
+                <Text as="b" display="inline" color={"red.300"}>
+                  Future
+                </Text>
+              </Heading>
+              <Text
+                as="p"
+                textAlign={"justify"}
+                fontSize={["xs", "sm", "md", "lg"]}
+                py={10}
+              >
+                This curriculum is intended for beginners who want to learn
+                software development from the ground up. The first three
+                quarters are shared by all specialties and are dedicated to
+                studying Object-Oriented Programming and cutting-edge Full-Stack
+                Web 2.0 development. It is going to be a fifteen-month-long
+                hybrid program that includes both onsite and online classes and
+                is divided into five quarters of 13 weeks each. The emphasis
+                will be on hands-on learning by educating students to produce
+                projects. To accommodate everyone, courses will be held
+                primarily on weekends or after 6:00 p.m. (Pakistan Time) on
+                weekdays. It employs a hybrid teaching format, with core onsite
+                classes complemented by online Zoom laboratories and recorded
+                videos.
+              </Text>
+            </Container>
+          </Box>
+        </motion.div>
+      </Flex>
+      <Flex direction={["column", "row"]}>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={customAnimations.zoomInAnimation}
+          // animate={controls}
+          transition={{ duration: 0.5 }}
+          ref={ref}
+        >
+          <Box pt={10} px={10} mt={20}>
+            <Heading
+              as={"h3"}
+              textAlign="left"
+              fontSize={["xl", "2xl", "3xl"]}
+              size="lg"
+              lineHeight={2}
+            >
+              The Outcome for Participants of the Program
+            </Heading>
+            <Text
+              as="p"
+              textAlign={"justify"}
+              fontSize={["xs", "sm", "md", "lg"]}
+              py={10}
+            >
+              The graduates of this program will own products (Full-Stack App
+              Templates, AR and VR Experiences, and APIs) that are marketed
+              globally by the Panaverse DAO and, if they like, will also be able
+              to start off by offering services at a rate of $50 per hour
+              ($96,000 per year). This would give Pakistani professionals and
+              students a fantastic opportunity to better their financial
+              situation while also giving the economy a much-needed boost by
+              expanding software exports.
+            </Text>
+          </Box>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={customAnimations.zoomInAnimation}
+          // animate={controls}
+          transition={{ duration: 0.5 }}
+          ref={ref}
+        >
+          <Box px={10} py={[10,20]} mt={10} borderRadius={20}>
+            <Image minW={[300 ,400, 500]} minH={[300, 400, 500]} src="assets/web3-careers.webp" alt="Web3 Careers" />
           </Box>
         </motion.div>
       </Flex>
