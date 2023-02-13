@@ -26,7 +26,7 @@ export const CourseContainer = (props: any) => {
       <Card
         p={10}
         maxW="md"
-        maxH="lg"
+        maxH="md"
         backgroundColor={colorName}
         boxSize={["xs", "sm", "md"]}
       >

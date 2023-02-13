@@ -23,7 +23,7 @@ export default function Header() {
           <Link as={NextLink} href="/">
             <Image
               src="assets/panaverse_dao_no_background.png"
-              h="100px"
+              h={["70px","100px", "120px"]}
               alt="Panaverse DAO"
             />
           </Link>

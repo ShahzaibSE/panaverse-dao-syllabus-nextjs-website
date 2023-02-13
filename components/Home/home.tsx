@@ -59,11 +59,16 @@ const responsiveSettings = [
   },
 ];
 
+// ----- //
+/** Adding Custom animations in object */
+// ----- //
 export const customAnimations = {
   zoomInAnimation: { opacity: 1, scale: 1 },
 };
 
+// ---- ///
 // Parallax Scroll Configuration
+/// ---- ///
 export function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
@@ -148,13 +153,15 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             ref={ref}
           >
-            <Box pt={[10, 20]} px={[10, 20]}>
-              <Container>
-                <Heading textAlign="left" fontSize={["lg", "xl", "2xl"]}>
-                  Certified Web 3.0 and Metaverse Developer
-                </Heading>
-              </Container>
-            </Box>
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <Box pt={[10, 20]} px={[10, 20]}>
+                <Container>
+                  <Heading textAlign="left" fontSize={["lg", "xl", "2xl"]}>
+                    Certified Web 3.0 and Metaverse Developer
+                  </Heading>
+                </Container>
+              </Box>
+            </motion.div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
@@ -162,19 +169,21 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             ref={ref}
           >
-            <Box pt={10} px={[10, 20]}>
-              <Container>
-                <Text
-                  as="p"
-                  textAlign="left"
-                  fontSize={["xs", "sm", "md", "lg"]}
-                >
-                  Consolidating Web 3.0, Metaverse, Artificial Intelligence
-                  (AI), Cloud, Edge, Ambient Computing/IoT, Network Automation,
-                  and Bioinformatics Technologies
-                </Text>
-              </Container>
-            </Box>
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <Box pt={10} px={[10, 20]}>
+                <Container>
+                  <Text
+                    as="p"
+                    textAlign="left"
+                    fontSize={["xs", "sm", "md", "lg"]}
+                  >
+                    Consolidating Web 3.0, Metaverse, Artificial Intelligence
+                    (AI), Cloud, Edge, Ambient Computing/IoT, Network
+                    Automation, and Bioinformatics Technologies
+                  </Text>
+                </Container>
+              </Box>
+            </motion.div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
@@ -182,17 +191,19 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             ref={ref}
           >
-            <Box px={[10, 20]} py={10}>
-              <Container>
-                <Button
-                  colorScheme="green"
-                  size={["md", "lg"]}
-                  rightIcon={<InfoIcon />}
-                >
-                  Explore Course
-                </Button>
-              </Container>
-            </Box>
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <Box px={[10, 20]} py={10}>
+                <Container>
+                  <Button
+                    colorScheme="green"
+                    size={["md", "lg"]}
+                    rightIcon={<InfoIcon />}
+                  >
+                    Explore Course
+                  </Button>
+                </Container>
+              </Box>
+            </motion.div>
           </motion.div>
         </Stack>
         <motion.div
@@ -201,16 +212,23 @@ export default function HomePage() {
           transition={{ duration: 0.5 }}
           ref={ref}
         >
-          <Box
-            my={10}
-            mx={20}
-            boxSize="xs"
-            display={{ base: "none", md: "flex" }}
-          >
-            <Center>
-              <Image src="assets/piaic-logo.png" alt="PIAIC" h={400} w={400} />
-            </Center>
-          </Box>
+          <motion.div whileHover={{ scale: 1.1 }}>
+            <Box
+              my={10}
+              mx={20}
+              boxSize="xs"
+              display={{ base: "none", md: "flex" }}
+            >
+              <Center>
+                <Image
+                  src="assets/piaic-logo.png"
+                  alt="PIAIC"
+                  h={400}
+                  w={400}
+                />
+              </Center>
+            </Box>
+          </motion.div>
         </motion.div>
         {/* <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
@@ -239,11 +257,16 @@ export default function HomePage() {
           transition={{ duration: 0.5 }}
           ref={ref}
         >
-          <Box p={20}>
-            <Heading textAlign="center" fontSize={["2xl", "3xl", "4xl"]}>
-              Core <span color="blue">Courses</span>
-            </Heading>
-          </Box>
+          <motion.div whileHover={{ scale: 1.1 }}>
+            <Box p={20}>
+              <Heading textAlign="center" fontSize={["2xl", "3xl", "4xl"]}>
+                Core{" "}
+                <Text display="inline" color="blue.300">
+                  Courses
+                </Text>
+              </Heading>
+            </Box>
+          </motion.div>
         </motion.div>
         <Box>
           <Flex justify={"center"} alignItems="center">
@@ -254,11 +277,13 @@ export default function HomePage() {
                 transition={{ duration: 0.5 }}
                 ref={ref}
               >
-                <CourseContainer
-                  name="Quarter I (Core)"
-                  description="CS-101: Object-Oriented Programming using TypeScript"
-                  colorName="red.200"
-                />
+                <motion.div whileHover={{ scale: 1.1 }}>
+                  <CourseContainer
+                    name="Quarter I (Core)"
+                    description="CS-101: Object-Oriented Programming using TypeScript"
+                    colorName="red.200"
+                  />
+                </motion.div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -266,12 +291,14 @@ export default function HomePage() {
                 transition={{ duration: 0.5 }}
                 ref={ref}
               >
-                <CourseContainer
-                  name="Quarter II (Core)"
-                  description="W2-201: Developing Planet-Scale Web 2.0 Serverless Cloud 
+                <motion.div whileHover={{ scale: 1.1 }}>
+                  <CourseContainer
+                    name="Quarter II (Core)"
+                    description="W2-201: Developing Planet-Scale Web 2.0 Serverless Cloud 
                   Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform"
-                  colorName="yellow.200"
-                />
+                    colorName="yellow.200"
+                  />
+                </motion.div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -279,11 +306,13 @@ export default function HomePage() {
                 transition={{ duration: 0.5 }}
                 ref={ref}
               >
-                <CourseContainer
-                  name="Quarter III (Core)"
-                  description="$-101: Dollar Making Bootcamp - Full-Stack Template and API Product Development"
-                  colorName="green.200"
-                />
+                <motion.div whileHover={{ scale: 1.1 }}>
+                  <CourseContainer
+                    name="Quarter III (Core)"
+                    description="$-101: Dollar Making Bootcamp - Full-Stack Template and API Product Development"
+                    colorName="green.200"
+                  />
+                </motion.div>
               </motion.div>
             </Stack>
           </Flex>
@@ -296,25 +325,29 @@ export default function HomePage() {
           transition={{ duration: 0.5 }}
           ref={ref}
         >
-          <Box pt={10} px={10}>
-            <Heading
-              as={"h3"}
-              textAlign="center"
-              fontSize={["xl", "2xl", "3xl"]}
-              size="lg"
-              lineHeight={2}
-            >
-              The Program in a Nutshell
-            </Heading>
-            <Heading
-              as={"h3"}
-              textAlign="center"
-              fontSize={["lg", "xl", "2xl"]}
-              size="sm"
-              color={"blue.300"}
-            >
-              Earn While You Learn
-            </Heading>
+          <Box pt={[10, 20]} px={10}>
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <Heading
+                as={"h3"}
+                textAlign="center"
+                fontSize={["xl", "2xl", "3xl"]}
+                size="lg"
+                lineHeight={2}
+              >
+                The Program in a Nutshell
+              </Heading>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <Heading
+                as={"h3"}
+                textAlign="center"
+                fontSize={["lg", "xl", "2xl"]}
+                size="sm"
+                color={"blue.300"}
+              >
+                Earn While You Learn
+              </Heading>
+            </motion.div>
           </Box>
         </motion.div>
         <motion.div
@@ -324,21 +357,23 @@ export default function HomePage() {
           transition={{ duration: 0.5 }}
           ref={ref}
         >
-          <Box pt={10} px={10}>
-            <Container>
-              <Text
-                as="p"
-                textAlign={"justify"}
-                fontSize={["xs", "sm", "md", "lg"]}
-              >
-                In this brand-new type of curriculum, students will learn how to
-                make money and boost exports in the classroom and will begin
-                doing so within six months of the program beginning. It
-                resembles a cross between a corporate venture and an educational
-                project.
-              </Text>
-            </Container>
-          </Box>
+          <motion.div whileHover={{ scale: 1.1 }}>
+            <Box pt={10} px={10}>
+              <Container>
+                <Text
+                  as="p"
+                  textAlign={"justify"}
+                  fontSize={["xs", "sm", "md", "lg"]}
+                >
+                  In this brand-new type of curriculum, students will learn how
+                  to make money and boost exports in the classroom and will
+                  begin doing so within six months of the program beginning. It
+                  resembles a cross between a corporate venture and an
+                  educational project.
+                </Text>
+              </Container>
+            </Box>
+          </motion.div>
         </motion.div>
       </Flex>
       <Flex direction={["column", "row"]} my={20}>
@@ -350,62 +385,62 @@ export default function HomePage() {
           ref={ref}
         >
           <Box pt={10} px={10} mt={20}>
-            <Heading
-              as={"h3"}
-              textAlign="left"
-              fontSize={["xl", "2xl", "3xl"]}
-              size="lg"
-              lineHeight={2}
-            >
-              What is Web3?
-            </Heading>
-            <Text
-              as="p"
-              textAlign={"left"}
-              fontSize={["xs", "sm", "md", "lg"]}
-              py={10}
-            >
-              Web3 is an idea for a new iteration of the World Wide Web which
-              incorporates concepts such as decentralization, blockchain
-              technologies, and token-based economics.
-            </Text>
+              <Heading
+                as={"h3"}
+                textAlign="left"
+                fontSize={["xl", "2xl", "3xl"]}
+                size="lg"
+                lineHeight={2}
+              >
+                What is Web3?
+              </Heading>
+              <Text
+                as="p"
+                textAlign={"left"}
+                fontSize={["xs", "sm", "md", "lg"]}
+                py={10}
+              >
+                Web3 is an idea for a new iteration of the World Wide Web which
+                incorporates concepts such as decentralization, blockchain
+                technologies, and token-based economics.
+              </Text>
             <UnorderedList>
-              <ListItem>
-                <Text
-                  as="p"
-                  fontSize={["xs", "sm", "md", "lg"]}
-                  lineHeight={10}
-                >
-                  Web3 is decentralized.
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text
-                  as="p"
-                  fontSize={["xs", "sm", "md", "lg"]}
-                  lineHeight={10}
-                >
-                  Web3 is permissionless.
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text
-                  as="p"
-                  fontSize={["xs", "sm", "md", "lg"]}
-                  lineHeight={10}
-                >
-                  Web3 has native payments.
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Text
-                  as="p"
-                  fontSize={["xs", "sm", "md", "lg"]}
-                  lineHeight={10}
-                >
-                  Web3 is trustless.
-                </Text>
-              </ListItem>
+                <ListItem>
+                  <Text
+                    as="p"
+                    fontSize={["xs", "sm", "md", "lg"]}
+                    lineHeight={10}
+                  >
+                    Web3 is decentralized.
+                  </Text>
+                </ListItem>
+                <ListItem>
+                  <Text
+                    as="p"
+                    fontSize={["xs", "sm", "md", "lg"]}
+                    lineHeight={10}
+                  >
+                    Web3 is permissionless.
+                  </Text>
+                </ListItem>
+                <ListItem>
+                  <Text
+                    as="p"
+                    fontSize={["xs", "sm", "md", "lg"]}
+                    lineHeight={10}
+                  >
+                    Web3 has native payments.
+                  </Text>
+                </ListItem>
+                <ListItem>
+                  <Text
+                    as="p"
+                    fontSize={["xs", "sm", "md", "lg"]}
+                    lineHeight={10}
+                  >
+                    Web3 is trustless.
+                  </Text>
+                </ListItem>
             </UnorderedList>
           </Box>
         </motion.div>
@@ -416,9 +451,11 @@ export default function HomePage() {
           transition={{ duration: 0.5 }}
           ref={ref}
         >
-          <Box px={10} pt={10} mt={20}>
-            <Image src="assets/working-on-laptop.avif" alt="What is Web3?" />
-          </Box>
+          <motion.div whileHover={{ scale: 1.1 }}>
+            <Box px={10} pt={10} mt={20}>
+              <Image src="assets/working-on-laptop.avif" alt="What is Web3?" />
+            </Box>
+          </motion.div>
         </motion.div>
       </Flex>
       <Flex direction={["column", "row"]}>
@@ -524,9 +561,11 @@ export default function HomePage() {
           transition={{ duration: 0.5 }}
           ref={ref}
         >
-          <Box px={10} py={20} mt={10} borderRadius={20}>
-            <Image src="assets/the-metaverse.jpeg" alt="What is Metaverse?" />
-          </Box>
+          <motion.div whileHover={{ scale: 1.1 }}>
+            <Box px={10} py={20} mt={10} borderRadius={20}>
+              <Image src="assets/the-metaverse.jpeg" alt="What is Metaverse?" />
+            </Box>
+          </motion.div>
         </motion.div>
       </Flex>
       <Flex direction={["column", "row"]} justify="center" align="center">
@@ -539,38 +578,42 @@ export default function HomePage() {
         >
           <Box pt={10} px={10} mt={20}>
             <Container>
-              <Heading
-                as={"h3"}
-                textAlign="center"
-                fontSize={["xl", "2xl", "3xl"]}
-                size="lg"
-                lineHeight={2}
-              >
-                Shape Your{" "}
-                <Text as="b" display="inline" color={"red.300"}>
-                  Future
+              <motion.div whileHover={{ scale: 1.1 }}>
+                <Heading
+                  as={"h3"}
+                  textAlign="center"
+                  fontSize={["xl", "2xl", "3xl"]}
+                  size="lg"
+                  lineHeight={2}
+                >
+                  Shape Your{" "}
+                  <Text as="b" display="inline" color={"red.300"}>
+                    Future
+                  </Text>
+                </Heading>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.1 }}>
+                <Text
+                  as="p"
+                  textAlign={"justify"}
+                  fontSize={["xs", "sm", "md", "lg"]}
+                  py={10}
+                >
+                  This curriculum is intended for beginners who want to learn
+                  software development from the ground up. The first three
+                  quarters are shared by all specialties and are dedicated to
+                  studying Object-Oriented Programming and cutting-edge
+                  Full-Stack Web 2.0 development. It is going to be a
+                  fifteen-month-long hybrid program that includes both onsite
+                  and online classes and is divided into five quarters of 13
+                  weeks each. The emphasis will be on hands-on learning by
+                  educating students to produce projects. To accommodate
+                  everyone, courses will be held primarily on weekends or after
+                  6:00 p.m. (Pakistan Time) on weekdays. It employs a hybrid
+                  teaching format, with core onsite classes complemented by
+                  online Zoom laboratories and recorded videos.
                 </Text>
-              </Heading>
-              <Text
-                as="p"
-                textAlign={"justify"}
-                fontSize={["xs", "sm", "md", "lg"]}
-                py={10}
-              >
-                This curriculum is intended for beginners who want to learn
-                software development from the ground up. The first three
-                quarters are shared by all specialties and are dedicated to
-                studying Object-Oriented Programming and cutting-edge Full-Stack
-                Web 2.0 development. It is going to be a fifteen-month-long
-                hybrid program that includes both onsite and online classes and
-                is divided into five quarters of 13 weeks each. The emphasis
-                will be on hands-on learning by educating students to produce
-                projects. To accommodate everyone, courses will be held
-                primarily on weekends or after 6:00 p.m. (Pakistan Time) on
-                weekdays. It employs a hybrid teaching format, with core onsite
-                classes complemented by online Zoom laboratories and recorded
-                videos.
-              </Text>
+              </motion.div>
             </Container>
           </Box>
         </motion.div>
@@ -584,30 +627,34 @@ export default function HomePage() {
           ref={ref}
         >
           <Box pt={10} px={10} mt={20}>
-            <Heading
-              as={"h3"}
-              textAlign="left"
-              fontSize={["xl", "2xl", "3xl"]}
-              size="lg"
-              lineHeight={2}
-            >
-              The Outcome for Participants of the Program
-            </Heading>
-            <Text
-              as="p"
-              textAlign={"justify"}
-              fontSize={["xs", "sm", "md", "lg"]}
-              py={10}
-            >
-              The graduates of this program will own products (Full-Stack App
-              Templates, AR and VR Experiences, and APIs) that are marketed
-              globally by the Panaverse DAO and, if they like, will also be able
-              to start off by offering services at a rate of $50 per hour
-              ($96,000 per year). This would give Pakistani professionals and
-              students a fantastic opportunity to better their financial
-              situation while also giving the economy a much-needed boost by
-              expanding software exports.
-            </Text>
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <Heading
+                as={"h3"}
+                textAlign="left"
+                fontSize={["xl", "2xl", "3xl"]}
+                size="lg"
+                lineHeight={2}
+              >
+                The Outcome for Participants of the Program
+              </Heading>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <Text
+                as="p"
+                textAlign={"justify"}
+                fontSize={["xs", "sm", "md", "lg"]}
+                py={10}
+              >
+                The graduates of this program will own products (Full-Stack App
+                Templates, AR and VR Experiences, and APIs) that are marketed
+                globally by the Panaverse DAO and, if they like, will also be
+                able to start off by offering services at a rate of $50 per hour
+                ($96,000 per year). This would give Pakistani professionals and
+                students a fantastic opportunity to better their financial
+                situation while also giving the economy a much-needed boost by
+                expanding software exports.
+              </Text>
+            </motion.div>
           </Box>
         </motion.div>
         <motion.div
@@ -617,9 +664,16 @@ export default function HomePage() {
           transition={{ duration: 0.5 }}
           ref={ref}
         >
-          <Box px={10} py={[10,20]} mt={10} borderRadius={20}>
-            <Image minW={[300 ,400, 500]} minH={[300, 400, 500]} src="assets/web3-careers.webp" alt="Web3 Careers" />
-          </Box>
+          <motion.div whileHover={{ scale: 1.1 }}>
+            <Box px={10} py={[10, 20]} mt={10} borderRadius={20}>
+              <Image
+                minW={[300, 400, 500]}
+                minH={[300, 400, 500]}
+                src="assets/web3-careers.webp"
+                alt="Web3 Careers"
+              />
+            </Box>
+          </motion.div>
         </motion.div>
       </Flex>
     </Box>
