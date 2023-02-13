@@ -14,15 +14,15 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <Box>
-      <header>
+      {/* <header>
         <Header />
-      </header>
+      </header> */}
       <main>
         <HomePage />
       </main>
-      <footer>
+      {/* <footer>
         <Footer/>
-      </footer>
+      </footer> */}
     </Box>
   );
 }
