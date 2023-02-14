@@ -2,16 +2,19 @@
 
 import React from "react";
 import NextLink from "next/link";
+import { useRouter } from 'next/navigation'
 import { motion } from "framer-motion";
 //
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Flex, Image, chakra, Button, Link, HStack } from "@chakra-ui/react";
 import MobileDrawer from "./mobile_drawer";
+//
+import {transformText} from "./util";
 
 const CTA = "Apply";
 
 export default function Header() {
-  const data = ["About", "Contact Us", "Courses"];
+  const data = ["about", "contact", "course"];
   return (
     <chakra.header id="header">
       <motion.div
@@ -30,8 +33,8 @@ export default function Header() {
 
           <HStack as="nav" spacing="5" display={{ base: "none", md: "flex" }}>
             {data.map((item: any, i: number) => (
-              <Link key={i} fontSize={["xs", "sm", "md", "lg", "xl"]}>
-                <Button variant="nav"> {item} </Button>
+              <Link key={i} fontSize={["xs", "sm", "md", "lg", "xl"]} href={`/${item}`}>
+                <Button variant="nav"> {transformText(item)} </Button>
               </Link>
             ))}
           </HStack>

@@ -191,9 +191,9 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             ref={ref}
           >
-            <motion.div whileHover={{ scale: 1.1 }}>
-              <Box px={[10, 20]} py={10}>
-                <Container>
+            <Box px={[10, 20]} py={10}>
+              <Container>
+                <motion.div whileHover={{ scale: 1.1 }}>
                   <Button
                     colorScheme="green"
                     size={["md", "lg"]}
@@ -201,9 +201,9 @@ export default function HomePage() {
                   >
                     Explore Course
                   </Button>
-                </Container>
-              </Box>
-            </motion.div>
+                </motion.div>
+              </Container>
+            </Box>
           </motion.div>
         </Stack>
         <motion.div
@@ -385,62 +385,62 @@ export default function HomePage() {
           ref={ref}
         >
           <Box pt={10} px={10} mt={20}>
-              <Heading
-                as={"h3"}
-                textAlign="left"
-                fontSize={["xl", "2xl", "3xl"]}
-                size="lg"
-                lineHeight={2}
-              >
-                What is Web3?
-              </Heading>
-              <Text
-                as="p"
-                textAlign={"left"}
-                fontSize={["xs", "sm", "md", "lg"]}
-                py={10}
-              >
-                Web3 is an idea for a new iteration of the World Wide Web which
-                incorporates concepts such as decentralization, blockchain
-                technologies, and token-based economics.
-              </Text>
+            <Heading
+              as={"h3"}
+              textAlign="left"
+              fontSize={["xl", "2xl", "3xl"]}
+              size="lg"
+              lineHeight={2}
+            >
+              What is Web3?
+            </Heading>
+            <Text
+              as="p"
+              textAlign={"left"}
+              fontSize={["xs", "sm", "md", "lg"]}
+              py={10}
+            >
+              Web3 is an idea for a new iteration of the World Wide Web which
+              incorporates concepts such as decentralization, blockchain
+              technologies, and token-based economics.
+            </Text>
             <UnorderedList>
-                <ListItem>
-                  <Text
-                    as="p"
-                    fontSize={["xs", "sm", "md", "lg"]}
-                    lineHeight={10}
-                  >
-                    Web3 is decentralized.
-                  </Text>
-                </ListItem>
-                <ListItem>
-                  <Text
-                    as="p"
-                    fontSize={["xs", "sm", "md", "lg"]}
-                    lineHeight={10}
-                  >
-                    Web3 is permissionless.
-                  </Text>
-                </ListItem>
-                <ListItem>
-                  <Text
-                    as="p"
-                    fontSize={["xs", "sm", "md", "lg"]}
-                    lineHeight={10}
-                  >
-                    Web3 has native payments.
-                  </Text>
-                </ListItem>
-                <ListItem>
-                  <Text
-                    as="p"
-                    fontSize={["xs", "sm", "md", "lg"]}
-                    lineHeight={10}
-                  >
-                    Web3 is trustless.
-                  </Text>
-                </ListItem>
+              <ListItem>
+                <Text
+                  as="p"
+                  fontSize={["xs", "sm", "md", "lg"]}
+                  lineHeight={10}
+                >
+                  Web3 is decentralized.
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text
+                  as="p"
+                  fontSize={["xs", "sm", "md", "lg"]}
+                  lineHeight={10}
+                >
+                  Web3 is permissionless.
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text
+                  as="p"
+                  fontSize={["xs", "sm", "md", "lg"]}
+                  lineHeight={10}
+                >
+                  Web3 has native payments.
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text
+                  as="p"
+                  fontSize={["xs", "sm", "md", "lg"]}
+                  lineHeight={10}
+                >
+                  Web3 is trustless.
+                </Text>
+              </ListItem>
             </UnorderedList>
           </Box>
         </motion.div>
