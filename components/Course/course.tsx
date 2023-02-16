@@ -75,15 +75,15 @@ export default function CoursePage() {
     await console.log(container);
   }, []);
   //
-//   useEffect(() => {
-//     if (inView) {
-//       // controls.start("visible");
-//       controls.start({ opacity: 1, scale: 1 });
-//     }
-//   }, [controls, inView]);
+  //   useEffect(() => {
+  //     if (inView) {
+  //       // controls.start("visible");
+  //       controls.start({ opacity: 1, scale: 1 });
+  //     }
+  //   }, [controls, inView]);
   return (
     <Box>
-        {/* <Particles
+      {/* <Particles
         init={particlesInit}
         loaded={particlesLoaded}
         ref={ref}
@@ -117,7 +117,7 @@ export default function CoursePage() {
       /> */}
       <Flex direction={["column", "row"]}>
         <Box>
-            <Heading as="h3">Specialized Course</Heading>
+          <Heading as="h3">Specialized Course</Heading>
         </Box>
       </Flex>
     </Box>

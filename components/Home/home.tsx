@@ -100,12 +100,12 @@ export default function HomePage() {
     "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
   ];
   //
-  useEffect(() => {
-    if (inView) {
-      // controls.start("visible");
-      controls.start({ opacity: 1, scale: 1 });
-    }
-  }, [controls, inView]);
+  // useEffect(() => {
+  //   if (inView) {
+  //     // controls.start("visible");
+  //     controls.start({ opacity: 1, scale: 1 });
+  //   }
+  // }, [controls, inView]);
   return (
     <Box>
       <Particles
