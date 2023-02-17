@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useRef, useEffect, useCallback } from "react";
 import {
   motion,
@@ -14,6 +13,7 @@ import { Zoom } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+//
 import {
   Box,
   Wrap,
@@ -38,8 +38,26 @@ import {
   ListIcon,
   UnorderedList,
 } from "@chakra-ui/react";
-import SpecializedCourseContainer from "./courseDetailContainer";
-import { speciliazed_courses } from "../util";
+import { InfoIcon } from "@chakra-ui/icons";
+import { wrap } from "module";
+import { CourseContainer } from "../util";
+
+const responsiveSettings = [
+  {
+    breakpoint: 800,
+    settings: {
+      slidesToShow: 3,
+      slidesToScroll: 3,
+    },
+  },
+  {
+    breakpoint: 500,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 2,
+    },
+  },
+];
 
 // ----- //
 /** Adding Custom animations in object */
@@ -74,16 +92,23 @@ export default function CoursePage() {
   const particlesLoaded = useCallback(async (container: any) => {
     await console.log(container);
   }, []);
+
   //
-  //   useEffect(() => {
-  //     if (inView) {
-  //       // controls.start("visible");
-  //       controls.start({ opacity: 1, scale: 1 });
-  //     }
-  //   }, [controls, inView]);
+  const images = [
+    "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+    "https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80",
+    "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+  ];
+  //
+  // useEffect(() => {
+  //   if (inView) {
+  //     // controls.start("visible");
+  //     controls.start({ opacity: 1, scale: 1 });
+  //   }
+  // }, [controls, inView]);
   return (
     <Box>
-      {/* <Particles
+      <Particles
         init={particlesInit}
         loaded={particlesLoaded}
         ref={ref}
@@ -114,11 +139,18 @@ export default function CoursePage() {
             },
           },
         }}
-      /> */}
-      <Flex direction={["column", "row"]}>
-        <Box>
-          <Heading as="h3">Specialized Course</Heading>
-        </Box>
+      />
+      <Flex>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={customAnimations.zoomInAnimation}
+          transition={{ duration: 0.5 }}
+          ref={ref}
+        >
+          <Box>
+            <Heading as="h3">Specialzed Courses</Heading>
+          </Box>
+        </motion.div>
       </Flex>
     </Box>
   );

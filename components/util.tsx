@@ -46,6 +46,23 @@ export const CourseContainer = (props: any) => {
   );
 };
 
+export function SpecializedCourseContainer(props: any) {
+  const { name, description } = props;
+  return (
+    <Card>
+      <CardHeader>
+        <Heading size="md"> {name} </Heading>
+      </CardHeader>
+      <CardBody>
+        <Text>{description}</Text>
+      </CardBody>
+      <CardFooter>
+        <Button>Learn More</Button>
+      </CardFooter>
+    </Card>
+  );
+}
+
 export function transformText(text: string) {
   try {
     let name_arr = text.split("");
