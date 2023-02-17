@@ -17,8 +17,10 @@ import {
   CardFooter,
   AspectRatio,
   WrapItem,
-  Center,
+  Divider,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { InfoIcon } from "@chakra-ui/icons";
 
 export const CourseContainer = (props: any) => {
   const { name, description, colorName } = props;
@@ -49,15 +51,23 @@ export const CourseContainer = (props: any) => {
 export function SpecializedCourseContainer(props: any) {
   const { name, description } = props;
   return (
-    <Card>
+    <Card
+      maxW={["sm","md"]}
+      maxH="lg"
+      p={10}
+    >
       <CardHeader>
         <Heading size="md"> {name} </Heading>
       </CardHeader>
       <CardBody>
-        <Text>{description}</Text>
+        <Text noOfLines={[5,6,7]}>{description}</Text>
       </CardBody>
       <CardFooter>
-        <Button>Learn More</Button>
+        <motion.div whileHover={{ scale: 1.1 }}>
+          <Button size={["md", "lg"]} rightIcon={<InfoIcon />} {...props}>
+            Learn More
+          </Button>
+        </motion.div>
       </CardFooter>
     </Card>
   );
@@ -101,11 +111,11 @@ export const speciliazed_courses: Array<{ name: string; description: string }> =
     {
       name: "Genomics and Bioinformatics Specialization",
       description:
-        "Genomics is the study of the total genetic makeup of individual organisms, and how this genetic information is structured, functions, and has evolved; bioinformatics encompasses a diverse range of analytical methods and tools applied to genomic data. This Specialization focuses on performing complex bioinformatics analysis using the most essential Python libraries and applications.",
+        "Genomics is the study of the total genetic makeup of individual organisms, and how this genetic information is structured, functions, and has evolved; bioinformatics encompasses a diverse range of analytical methods and tools applied to genomic data.",
     },
     {
       name: "Network Programmability and Automation Specialization",
       description:
-        "More than ever, network engineers are finding it challenging to complete their duties entirely manually. Network automation is now crucial due to new protocols, technologies, delivery models, and the requirement for enterprises to become more adaptable and agile. This course teaches network engineers how to automate systems with code using a variety of technologies and tools, including Linux, Python, APIs, and Git.",
+        "More than ever, network engineers are finding it challenging to complete their duties entirely manually. Network automation is now crucial due to new protocols, technologies, and delivery models.",
     },
   ];

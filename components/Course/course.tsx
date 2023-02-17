@@ -40,7 +40,7 @@ import {
 } from "@chakra-ui/react";
 import { InfoIcon } from "@chakra-ui/icons";
 import { wrap } from "module";
-import { CourseContainer } from "../util";
+import { speciliazed_courses, SpecializedCourseContainer } from "../util";
 
 const responsiveSettings = [
   {
@@ -140,18 +140,26 @@ export default function CoursePage() {
           },
         }}
       />
-      <Flex>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          whileInView={customAnimations.zoomInAnimation}
-          transition={{ duration: 0.5 }}
-          ref={ref}
-        >
-          <Box>
-            <Heading as="h3">Specialzed Courses</Heading>
-          </Box>
-        </motion.div>
-      </Flex>
+      <Wrap direction={["column", "row"]} justify="space-around">
+        {speciliazed_courses.map((speciliazed_course: any, index: number) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={customAnimations.zoomInAnimation}
+            transition={{ duration: 0.5 }}
+            ref={ref}
+          >
+            <WrapItem key={index}>
+              <SpecializedCourseContainer
+                key={index}
+                name={speciliazed_course.name}
+                description={speciliazed_course.description}
+                colorScheme="blue"
+              />
+            </WrapItem>
+          </motion.div>
+        ))}
+      </Wrap>
     </Box>
   );
 }
