@@ -21,6 +21,7 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { InfoIcon } from "@chakra-ui/icons";
+import { Course } from "./model";
 
 export const CourseContainer = (props: any) => {
   const { name, description, colorName } = props;
@@ -52,15 +53,15 @@ export function SpecializedCourseContainer(props: any) {
   const { name, description } = props;
   return (
     <Card
-      maxW={["sm","md"]}
-      maxH="lg"
+      w={["sm","md"]}
+      h={["sm", "md"]}
       p={10}
     >
       <CardHeader>
         <Heading size="md"> {name} </Heading>
       </CardHeader>
       <CardBody>
-        <Text noOfLines={[5,6,7]}>{description}</Text>
+        <Text noOfLines={[4,5]}>{description}</Text>
       </CardBody>
       <CardFooter>
         <motion.div whileHover={{ scale: 1.1 }}>
@@ -86,7 +87,7 @@ export function transformText(text: string) {
 }
 
 //
-export const speciliazed_courses: Array<{ name: string; description: string }> =
+export const speciliazed_courses: Array<Course> =
   [
     {
       name: "Web 3.0 (Blockchain) and Metaverse Specialization",

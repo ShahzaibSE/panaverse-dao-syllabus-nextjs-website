@@ -9,7 +9,7 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Flex, Image, chakra, Button, Link, HStack } from "@chakra-ui/react";
 import MobileDrawer from "./mobile_drawer";
 //
-import {transformText} from "./util";
+import {transformText} from "./Utils/util";
 
 const CTA = "Apply";
 

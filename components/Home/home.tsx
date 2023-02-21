@@ -40,7 +40,7 @@ import {
 } from "@chakra-ui/react";
 import { InfoIcon } from "@chakra-ui/icons";
 import { wrap } from "module";
-import { CourseContainer } from "../util";
+import { CourseContainer } from "../Utils/util";
 
 const responsiveSettings = [
   {

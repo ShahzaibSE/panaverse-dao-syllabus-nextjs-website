@@ -37,10 +37,11 @@ import {
   ListItem,
   ListIcon,
   UnorderedList,
+  Divider,
 } from "@chakra-ui/react";
 import { InfoIcon } from "@chakra-ui/icons";
 import { wrap } from "module";
-import { speciliazed_courses, SpecializedCourseContainer } from "../util";
+import { speciliazed_courses, SpecializedCourseContainer } from "../Utils/util";
 
 const responsiveSettings = [
   {
@@ -140,7 +141,7 @@ export default function CoursePage() {
           },
         }}
       />
-      <Wrap direction={["column", "row"]} justify="space-around">
+      <Wrap direction={["column", "row"]} justify="center">
         {speciliazed_courses.map((speciliazed_course: any, index: number) => (
           <motion.div
             key={index}
@@ -149,7 +150,7 @@ export default function CoursePage() {
             transition={{ duration: 0.5 }}
             ref={ref}
           >
-            <WrapItem key={index}>
+            <WrapItem key={index} my={10}>
               <SpecializedCourseContainer
                 key={index}
                 name={speciliazed_course.name}
@@ -157,6 +158,7 @@ export default function CoursePage() {
                 colorScheme="blue"
               />
             </WrapItem>
+            <Divider key={index} colorScheme="gray" />
           </motion.div>
         ))}
       </Wrap>
