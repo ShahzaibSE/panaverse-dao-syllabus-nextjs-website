@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   Box,
   Wrap,
@@ -24,7 +24,7 @@ import {
 import { motion } from "framer-motion";
 import { InfoIcon } from "@chakra-ui/icons";
 import { Course } from "./model";
-import CourseDetails from "../Course/courseDetails";
+import CourseDetails from "./courseDetails";
 
 export const CourseContainer = (props: any) => {
   const { name, description, colorName } = props;
@@ -54,8 +54,8 @@ export const CourseContainer = (props: any) => {
 
 export function SpecializedCourseContainer(props: any) {
   // Drawer State.
-  const [size, setSize] = useState("");
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = useRef();
   //
   const { name, description } = props;
   return (
@@ -69,12 +69,24 @@ export function SpecializedCourseContainer(props: any) {
         </CardBody>
         <CardFooter>
           <motion.div whileHover={{ scale: 1.1 }}>
-            <Button size={["md", "lg"]} rightIcon={<InfoIcon />} {...props}>
+            <Button
+              ref={btnRef}
+              size={["md", "lg"]}
+              rightIcon={<InfoIcon />}
+              onClick={onOpen}
+              {...props}
+            >
               Learn More
             </Button>
           </motion.div>
         </CardFooter>
       </Card>
+      <CourseDetails
+        isOpen={isOpen}
+        onClose={onClose}
+        finalFocusRef={btnRef}
+        size="full"
+      />
     </Box>
   );
 }
