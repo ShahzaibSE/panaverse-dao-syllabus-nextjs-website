@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect, useCallback } from "react";
+import React, { useRef, useEffect, useCallback, useState } from "react";
 import {
   motion,
   useScroll,
@@ -38,6 +38,7 @@ import {
   ListIcon,
   UnorderedList,
   Divider,
+  useDisclosure
 } from "@chakra-ui/react";
 import { InfoIcon } from "@chakra-ui/icons";
 import { wrap } from "module";
@@ -75,6 +76,7 @@ export function useParallax(value: MotionValue<number>, distance: number) {
 }
 
 export default function CoursePage() {
+
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 300);
@@ -150,7 +152,7 @@ export default function CoursePage() {
             transition={{ duration: 0.5 }}
             ref={ref}
           >
-            <WrapItem key={index} my={10}>
+            <WrapItem key={index} my={20}>
               <SpecializedCourseContainer
                 key={index}
                 name={speciliazed_course.name}
@@ -158,10 +160,9 @@ export default function CoursePage() {
                 colorScheme="blue"
               />
             </WrapItem>
-            <Divider key={index} colorScheme="gray" />
           </motion.div>
         ))}
       </Wrap>
     </Box>
-  );
+  ); 
 }
