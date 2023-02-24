@@ -7,10 +7,12 @@ import {
   Button, useDisclosure
 } from "@chakra-ui/react";
 import { InfoIcon } from "@chakra-ui/icons";
+import { Course } from "./model";
 
 
 
 export default function CourseDetails(props: any) {
+  const {name, description} = props.course;
 
   return (
     <>
@@ -18,16 +20,10 @@ export default function CourseDetails(props: any) {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Course Details</DrawerHeader>
+          <DrawerHeader>{name}</DrawerHeader>
           <DrawerBody>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Consequat nisl vel pretium lectus quam id. Semper quis lectus
-              nulla at volutpat diam ut venenatis. Dolor morbi non arcu risus
-              quis varius quam quisque. Massa ultricies mi quis hendrerit dolor
-              magna eget est lorem. Erat imperdiet sed euismod nisi porta.
-              Lectus vestibulum mattis ullamcorper velit.
+             {description}
             </p>
           </DrawerBody>
         </DrawerContent>

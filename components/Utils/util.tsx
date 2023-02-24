@@ -86,6 +86,7 @@ export function SpecializedCourseContainer(props: any) {
         onClose={onClose}
         finalFocusRef={btnRef}
         size="full"
+        course={{name, description}}
       />
     </Box>
   );
