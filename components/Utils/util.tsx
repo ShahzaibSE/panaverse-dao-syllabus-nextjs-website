@@ -137,7 +137,7 @@ export const speciliazed_courses: Array<Course> = [
           theory5: {
             title: "Blockchain Project: Create a Token and Launch ICO/IEO/IDO",
             description:
-              "The ICO ('Initial Coin Offering') industry has been booming, and it's completely reinventing the way new startups kickstart themselves. Understand the difference between IDO vs. IEO vs. ICO ",
+              "The ICO ('Initial Coin Offering') industry has been booming, and it's completely reinventing the way new startups kickstart themselves. Understand the difference between IDO vs. IEO vs. ICO while working on projects",
           },
         },
       },
@@ -155,12 +155,11 @@ export const speciliazed_courses: Array<Course> = [
           solidity_essentials: {
             title:
               "Solidity Programming Essentials - Second Edition By Ritesh Modi",
-            resource:
-              "https://www.packtpub.com/product/solidity-programming-essentials-second-edition/9781803231181",
+            link: "https://www.packtpub.com/product/solidity-programming-essentials-second-edition/9781803231181",
           },
           solidity_repo: {
             title: "Solidity Learning Repo",
-            resource: "https://github.com/panaverse/dapps-nextjs",
+            link: "https://github.com/panaverse/dapps-nextjs",
           },
         },
       },
