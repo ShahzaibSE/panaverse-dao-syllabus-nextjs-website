@@ -3,4 +3,9 @@ export interface Course {
     description: string;
     imageUrl?: string;
     route?: string;
+    course_outline?: CourseOutline
+}
+
+export interface CourseOutline {
+    discipline_details: {};
 }

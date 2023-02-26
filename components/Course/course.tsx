@@ -158,6 +158,7 @@ export default function CoursePage() {
                 name={speciliazed_course.name}
                 description={speciliazed_course.description}
                 colorScheme="blue"
+                course_outline={speciliazed_course.course_outline}
               />
             </WrapItem>
           </motion.div>
