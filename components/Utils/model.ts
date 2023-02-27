@@ -3,9 +3,13 @@ export interface Course {
     description: string;
     imageUrl?: string;
     route?: string;
-    course_outline?: CourseOutline
+    course_outline?: Array<CourseOutline>
 }
 
 export interface CourseOutline {
-    discipline_details: {};
+    title?: string;
+    cardTitle: string;
+    cardSubtitle?: string;
+    cardDetailedText?: string;
+    url?: string;
 }

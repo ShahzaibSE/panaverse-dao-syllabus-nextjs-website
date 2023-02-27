@@ -13,6 +13,7 @@ import {
   Heading,
   Container,
   Image,
+  Divider,
 } from "@chakra-ui/react";
 import { InfoIcon } from "@chakra-ui/icons";
 import { Course } from "./model";
@@ -35,79 +36,45 @@ export default function CourseDetails(props: any) {
           </DrawerHeader>
           <DrawerBody>
             <Flex direction="column" justify="center">
-              <Container>
-              <Text
-                as="p"
-                textAlign={["justify"]}
-                fontSize={["xs", "sm", "md", "lg"]}
-              >
-                {description}
-              </Text>
-              </Container>
+              <Box>
+                <Text
+                  as="p"
+                  textAlign={["justify"]}
+                  fontSize={["xs", "sm", "md", "lg"]}
+                >
+                  {description}
+                </Text>
+                <Divider py={10} />
+              </Box>
             </Flex>
-            <Chrono mode="VERTICAL">
-              <Flex direction="column" justify="center">
-                <Box>
-                  <Heading
-                    fontSize={["lg", "xl", "2xl"]}
-                    textAlign={["justify", "center"]}
-                  >
-                    Blockchain and Metaverse Theory
-                  </Heading>
-                  {/* <Image
-                    style={{ maxWidth: "100%", maxHeight: "100%" }}
-                    alt="test"
-                    src="https://cdn.tutsplus.com/net/uploads/2013/08/github-collab-retina-preview.gif"
-                  /> */}
-                </Box>
-                <Box>
-                  <Text
-                    as="p"
-                    textAlign={["justify"]}
-                    fontSize={["xs", "sm", "md", "lg"]}
-                  >
-                    The Metaverse: And How It Will Revolutionize Everything by Matthew Ball.
-                  </Text>
-                </Box>
-                <Box></Box>
-              </Flex>
-              <div>
-                <h3>This is a List</h3>
-                <ul>
-                  <li>Item 1</li>
-                  <li>Item 2</li>
-                </ul>
-              </div>
-              <div>
-                <h3>Dunkirk</h3>
-                <p>
-                  The Battle of Dunkirk (French: Bataille de Dunkerque) was
-                  fought in Dunkirk (Dunkerque), France, during the Second World
-                  War, between the Allies and Nazi Germany.
-                </p>
-              </div>
-              <div style={{ margin: "1rem" }}>
-                <h3>Table</h3>
-                <table>
-                  <thead>
-                    <tr>
-                      <td>Column 1</td>
-                      <td>Column 2</td>
-                      <td>Column 3</td>
-                      <td>Column 4</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Value 1</td>
-                      <td>Value 2</td>
-                      <td>Value 3</td>
-                      <td>Value 4</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </Chrono>
+            <Chrono
+              items={[
+                {
+                  title: "May 1940",
+                  cardTitle: "Dunkirk",
+                  url: "http://google.com",
+                  cardSubtitle:
+                    "Men of the British Expeditionary Force (BEF) wade out to a destroyer during the evacuation from Dunkirk.",
+                  cardDetailedText: `On 10 May 1940, Hitler began his long-awaited offensive in the west by invading neutral Holland and Belgium and attacking northern France. Holland capitulated after only five days of fighting, and the Belgians surrendered on 28 May. With the success of the German ‘Blitzkrieg’, the British Expeditionary Force and French troops were in danger of being cut off and destroyed.`,
+                },
+                {
+                  title: "25 July 1940",
+                  cardTitle: "The Battle of Britain",
+                  cardSubtitle: `RAF Spitfire pilots scramble for their planes`,
+                  cardDetailedText: `After France’s surrender in June 1940, Churchill told the British people, “Hitler knows that he will have to break us in this island or lose the war”. To mount a successful invasion, the Germans had to gain air superiority. The first phase of the battle began on 10 July with Luftwaffe attacks on shipping in the Channel.
+      The following month, RAF Fighter Command airfields and aircraft factories came under attack. Under the dynamic direction of Lord Beaverbrook, production of Spitfire and Hurricane fighters increased, and despite its losses in pilots and planes, the RAF was never as seriously weakened as the Germans supposed.`,
+                },
+                {
+                  title: "June 1941",
+                  cardTitle: "Operation Barbarossa",
+                  cardSubtitle: `A column of Red Army prisoners taken during the first days of the German invasion`,
+                  cardDetailedText: `Since the 1920s, Hitler had seen Russia, with its immense natural resources, as the principal target for conquest and expansion. It would provide, he believed, the necessary ‘Lebensraum’, or living space, for the German people. And by conquering Russia, Hitler would also destroy the “Jewish pestilential creed of Bolshevism”. His non-aggression pact with Stalin in August 1939 he regarded as a mere temporary expedient.
+      Barely a month after the fall of France, and while the Battle of Britain was being fought, Hitler started planning for the Blitzkrieg campaign against Russia, which began on 22 June 1941. Despite repeated warnings, Stalin was taken by surprise, and for the first few months the Germans achieved spectacular victories, capturing huge swathes of land and hundreds of thousands of prisoners. But they failed to take Moscow or Leningrad before winter set in.
+      On 5/6 December, the Red Army launched a counter-offensive which removed the immediate threat to the Soviet capital. It also brought the German high command to the brink of a catastrophic military crisis. Hitler stepped in and took personal command. His intervention was decisive and he later boasted, “That we overcame this winter and are today in a position again to proceed victoriously… is solely attributable to the bravery of the soldiers at the front and my firm will to hold out…”`,
+                },
+              ]}
+              mode="VERTICAL"
+            />
           </DrawerBody>
         </DrawerContent>
       </Drawer>
