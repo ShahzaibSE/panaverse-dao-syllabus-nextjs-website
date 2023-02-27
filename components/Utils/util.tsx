@@ -122,8 +122,8 @@ export const speciliazed_courses: Array<Course> = [
             link: "https://www.amazon.com/Metaverse-How-Will-Revolutionize-Everything/dp/1324092033/ref=tmm_hrd_swatch_0",
           },
           theory2: {
-            title: "Mastering Blockchain - Fourth Edition by Imran Bashir",
-            link: "https://www.packtpub.com/product/mastering-blockchain-fourth-edition/9781803241067",
+            title: "Smart Contract Development in Solidity",
+            link: "https://github.com/panaverse/defi-dapps-solidity-smart-contracts",
           },
           theory3: {
             title: "Dapp Development using Ethers.js and Next.js 13",
@@ -139,6 +139,15 @@ export const speciliazed_courses: Array<Course> = [
             description:
               "The ICO ('Initial Coin Offering') industry has been booming, and it's completely reinventing the way new startups kickstart themselves. Understand the difference between IDO vs. IEO vs. ICO while working on projects",
           },
+          theory6: {
+            title: "Open Metaverse Web Development",
+            descritpion: "Open Metaverse Learning Repo", 
+            link: "https://github.com/panaverse/metaverse-web"
+          },
+          theory7: {
+            title: "Blender 3D asset Creation for the Metaverse (Remote Zoom Class)",
+            description: "Blender development is being funded by heavyweights in the real-time 3D (RT3D) space such as Apple, Unity, AMD, Intel, Meta, NVIDIA, AWS, Epic Games, Adobe, Microsoft, and Decentraland. It is expected to become the standard asset creation tool for metaverse."
+          }
         },
       },
     },
@@ -152,7 +161,7 @@ export const speciliazed_courses: Array<Course> = [
       discipline_details: {
         discipline: {
           title: "Smart Contract Development in Solidity",
-          solidity_essentials: {
+          theory1: {
             title:
               "Solidity Programming Essentials - Second Edition By Ritesh Modi",
             link: "https://www.packtpub.com/product/solidity-programming-essentials-second-edition/9781803231181",
