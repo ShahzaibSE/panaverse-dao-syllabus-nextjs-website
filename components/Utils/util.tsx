@@ -217,6 +217,22 @@ export const speciliazed_courses: Array<Course> = [
         cardTitle:
           "Introduction to the Internet of Things and Embedded Systems",
         url: "https://docs.google.com/presentation/d/14OcW4HfS2i1Db1uKOU6SrckFEFjhSLMgfnHYB3XlEZo/edit?usp=shar",
+        cardSubtitle: `What is the Fourth Industrial Revolution? 
+        What is IoT? 
+        Embedded Systems 
+        Hardware and Software for IoT 
+        Edge and Cloud Computing 
+        The future of IoT is AI 
+        Blockchain in the Internet of Things? 
+        IoT + AI + Blockchain: The Fourth Industrial Revolution has begun
+        How will Matter change the IoT Infrastructure and address issues
+        Metaverse and IoT
+        `,
+      },
+      {
+        cardTitle:
+          "The C Reference Book: The C programming language Embedded Programming book: Internet of things with ESP8266",
+        url: "https://drive.google.com/drive/folders/1CZFxLSFoo9rl3le7KRuhUwLEV6h4xLXN?usp=sharing",
       },
       {
         cardTitle:
@@ -224,7 +240,46 @@ export const speciliazed_courses: Array<Course> = [
         url: "https://drive.google.com/drive/folders/1CZFxLSFoo9rl3le7KRuhUwLEV6h4xLXN?usp=sharing",
       },
       {
-        cardTitle: "Introduction to C Part 1",
+        cardTitle: "Introduction to C Part 1 (Weeks 3B, 4, and 5)",
+        cardSubtitle:
+          "C environment Setup for (Windows, Linux, and Mac OS systems)",
+        url: "https://drive.google.com/drive/folders/1CZFxLSFoo9rl3le7KRuhUwLEV6h4xLXN?usp=sharing",
+      },
+      {
+        cardTitle: "C Programming Part 2 (Weeks 6 and 7)",
+        cardSubtitle:
+          "C environment Setup for (Windows, Linux, and Mac OS systems)",
+        url: "https://drive.google.com/drive/folders/1CZFxLSFoo9rl3le7KRuhUwLEV6h4xLXN?usp=sharing",
+      },
+      {
+        cardTitle: "Introduction to Embedded systems Part 1 (Weeks 8)",
+        cardSubtitle: "Basic Electronics and Introduction to microcontrollers",
+        url: "https://drive.google.com/drive/folders/1CZFxLSFoo9rl3le7KRuhUwLEV6h4xLXN?usp=sharing",
+      },
+      {
+        cardTitle: "Introduction to Embedded systems Part 2 (Weeks 9-12)",
+        cardSubtitle: "Chapters 2-5 of “Internet of things with ESP8266",
+        url: "https://drive.google.com/drive/folders/1CZFxLSFoo9rl3le7KRuhUwLEV6h4xLXN?usp=sharing",
+      },
+      {
+        cardTitle: "Introduction to Embedded systems Part 2 (Weeks 9-12)",
+        cardSubtitle: "Chapters 2-5 of “Internet of things with ESP8266",
+        url: "https://www.rust-lang.org/what/embedded",
+      },
+      {
+        cardTitle:
+          "Embedded Programming using Rust (Extra Weeks in the Course)",
+        cardSubtitle: "Chapters 2-5 of “Internet of things with ESP8266",
+        url: "https://drive.google.com/drive/folders/1CZFxLSFoo9rl3le7KRuhUwLEV6h4xLXN?usp=sharing",
+      },
+      {
+        cardTitle: "Hardware Requirments",
+        cardSubtitle: `Esp8266 (Node MCU),
+        Jumper Wires,
+        Bread Board,
+        LEDs,
+        Sensors: (Dht11, ultrasonic sensor, IR sensor)
+        `,
       },
     ],
   },
@@ -237,7 +292,7 @@ export const speciliazed_courses: Array<Course> = [
       {
         cardTitle:
           "Solidity Programming Essentials - Second Edition By Ritesh Modi",
-        url: "https://www.packtpub.com/product/solidity-programming-essentials-second-edition/9781803231181",
+        url: "https://drive.google.com/drive/folders/1CZFxLSFoo9rl3le7KRuhUwLEV6h4xLXN?usp=sharing",
       },
       {
         cardTitle: "Solidity Learning Repo",
@@ -259,6 +314,11 @@ export const speciliazed_courses: Array<Course> = [
       {
         cardTitle: "Solidity Learning Repo",
         url: "https://github.com/panaverse/dapps-nextjs",
+      },
+      {
+        cardTitle:
+          "Introduction to the Internet of Things and Embedded Systems",
+        url: "https://docs.google.com/presentation/d/14OcW4HfS2i1Db1uKOU6SrckFEFjhSLMgfnHYB3XlEZo/edit?usp=sharing",
       },
     ],
   },
