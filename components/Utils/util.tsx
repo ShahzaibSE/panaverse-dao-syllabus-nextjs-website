@@ -126,54 +126,67 @@ export const speciliazed_courses: Array<Course> = [
       },
       {
         cardTitle: "Tokenomics",
-        cardDetailedText:
+        cardSubtitle:
           "Tokenomics is an important concept to consider when making an investment decision because ultimately a project that has smart and well-designed incentives to buy and hold tokens for the long haul is more likely to outlast and do better than a project that hasn't built an ecosystem around its token. A well-built platform often translates into higher demand over time as new investors flock to the project, which, in turn, boosts prices.",
       },
       {
         cardTitle: "Blockchain Project: Create a Token and Launch ICO/IEO/IDO",
-        cardDetailedText:
+        cardSubtitle:
           "The ICO ('Initial Coin Offering') industry has been booming, and it's completely reinventing the way new startups kickstart themselves. Understand the difference between IDO vs. IEO vs. ICO while working on projects",
       },
       {
         cardTitle: "Open Metaverse Web Development",
-        cardDetailedText: "Open Metaverse Learning Repo",
+        cardSubtitle: "Open Metaverse Learning Repo",
         url: "https://github.com/panaverse/metaverse-web",
       },
       {
         cardTitle:
           "Blender 3D asset Creation for the Metaverse (Remote Zoom Class)",
-        cardDetailedText:
+        cardSubtitle:
           "Blender development is being funded by heavyweights in the real-time 3D (RT3D) space such as Apple, Unity, AMD, Intel, Meta, NVIDIA, AWS, Epic Games, Adobe, Microsoft, and Decentraland. It is expected to become the standard asset creation tool for metaverse.",
       },
     ],
   },
   {
     route: "artificial_intelligence",
-    name: "Artificial Intelligence (AI) and Deep Learning Specialization",
+    name: "Artificial Intelligence (AI) Specialization",
     description:
       "The AI and Deep Learning specialization focuses on building and deploying intelligent APIs using OpenAI models and building custom Deep Learning Tensorflow models.",
     course_outline: [
       {
         cardTitle:
           "Introduction to Machine Learning, Data Science, and AI, AI for Everyone",
+        cardSubtitle: `Artificial intelligence is the simulation of human intelligence processes by machines, 
+        especially computer systems. Specific applications of AI include expert systems, natural language processing, 
+        speech recognition and machine 
+        vision.`,
         url: "https://www.coursera.org/learn/ai-for-everyone",
       },
       {
         cardTitle:
           "Building Next-Gen Intelligent Apps with OpenAI’s Powerful Models We will cover GPT-4, ChatGPT, etc. and Next.js 13",
+        cardSubtitle: `ChatGPT is an artificial intelligence chatbot developed by OpenAI and launched in November 2022. 
+        It is built on top of OpenAI's GPT-3 family of large language models and has been fine-tuned using both supervised and 
+        reinforcement learning techniques.`,
         url: "https://towardsdatascience.com/gpt-4-is-coming-soon-heres-what-we-know-about-it-64db058cfd45",
       },
       {
         cardTitle: "Python Crash Course  for TypeScript Developers",
+        cardSubtitle: `Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically typed and garbage-collected. 
+        It supports multiple programming paradigms, including structured, object-oriented and functional programming.`,
         url: "https://www.amazon.com/Python-Crash-Course-2nd-Edition/dp/1593279280/ref=sr_1_5",
       },
       {
         cardTitle: "Deep Learning with Tensorflow",
+        cardSubtitle: `TensorFlow is a free and open-source software library for machine learning and artificial intelligence. 
+        It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks.`,
         url: "https://www.amazon.com/Learning-Python-Second-Fran%C3%A7ois-Chollet/dp/1617296864/ref=sr_1_2",
       },
       {
         cardTitle:
           "Machine Learning Engineering for Production (MLOps) using Terraform for CDK",
+        cardSubtitle: `MLOps or ML Ops is a set of practices that aims to deploy and maintain machine learning models in production reliably and efficiently. 
+        The word is a compound of "machine learning" and the continuous development practice of DevOps in the software field.`,
         url: "https://betterprogramming.pub/a-comprehensive-guide-to-mlops-infrastructure-as-code-iac-ef4c97742351",
       },
     ],
@@ -187,14 +200,20 @@ export const speciliazed_courses: Array<Course> = [
       {
         cardTitle:
           "Kubernetes: Up and Running: Dive into the Future of Infrastructure 3rd Edition",
+        cardSubtitle: `Kubernetes is an open-source container orchestration system for automating software deployment, scaling, and management. Originally designed by Google, the project is now maintained by the Cloud Native Computing Foundation. 
+        The name Kubernetes originates from Greek, meaning 'helmsman' or 'pilot'.`,
         url: "https://www.amazon.com/Kubernetes-Running-Dive-Future-Infrastructure/dp/109811020X/ref=sr_1_3",
       },
       {
         cardTitle: "Cloud Development Kit for Kubernetes",
+        cardSubtitle: `cdk8s is an open-source software development framework for defining Kubernetes applications and reusable abstractions using familiar programming languages and rich object-oriented APIs. 
+        cdk8s apps synthesize into standard Kubernetes manifests which can be applied to any Kubernetes cluster.`,
         url: "https://cdk8s.io/",
       },
       {
         cardTitle: "CDK for Terraform",
+        cardSubtitle: `Terraform is an open-source infrastructure-as-code software tool created by HashiCorp. 
+        Users define and provide data center infrastructure using a declarative configuration language known as HashiCorp Configuration Language, or optionally JSON.`,
         url: "https://developer.hashicorp.com/terraform/cdktf",
       },
     ],
@@ -290,14 +309,15 @@ export const speciliazed_courses: Array<Course> = [
       "Genomics is the study of the total genetic makeup of individual organisms, and how this genetic information is structured, functions, and has evolved; bioinformatics encompasses a diverse range of analytical methods and tools applied to genomic data.",
     course_outline: [
       {
-        cardTitle:
-          "Python for biologists",
-        cardSubtitle: "This course will focus on learning the basics of the Python programming language through genomics examples.",
+        cardTitle: "Python for biologists",
+        cardSubtitle:
+          "This course will focus on learning the basics of the Python programming language through genomics examples.",
         url: "https://www.pythonforbiologists.org/",
       },
       {
         cardTitle: "Bioinformatics with Python",
-        cardSubtitle: "In this course we will discover modern, next-generation sequencing libraries from the powerful Python ecosystem to perform cutting-edge research and analyze large amounts of biological data.",
+        cardSubtitle:
+          "In this course we will discover modern, next-generation sequencing libraries from the powerful Python ecosystem to perform cutting-edge research and analyze large amounts of biological data.",
         url: "https://www.amazon.com/Bioinformatics-Python-Cookbook-applications-computational/dp/1803236426/ref=sr_1_1",
       },
     ],
@@ -309,16 +329,17 @@ export const speciliazed_courses: Array<Course> = [
       "More than ever, network engineers are finding it challenging to complete their duties entirely manually. Network automation is now crucial due to new protocols, technologies, and delivery models.",
     course_outline: [
       {
-        cardTitle:
-          "NPA-351: CCNA 200-301 Certification",
-        cardSubtitle: "This course will focus on learning the basics of the networking and preparing for the new Cisco Certified Network Associate (CCNA) exam. This comprehensive course focuses on the solutions and technologies needed to implement and administer a broad range of modern networking and IT infrastructure.",
+        cardTitle: "NPA-351: CCNA 200-301 Certification",
+        cardSubtitle:
+          "This course will focus on learning the basics of the networking and preparing for the new Cisco Certified Network Associate (CCNA) exam. This comprehensive course focuses on the solutions and technologies needed to implement and administer a broad range of modern networking and IT infrastructure.",
         url: "https://www.amazon.com/CCNA-200-301-Official-Guide-Library/dp/1587147149/ref=sr_1_1",
       },
       {
         cardTitle: "NPA-361: Network Programmability and Automation",
-        cardSubtitle: "Traditional network management techniques can't be effectively automated and don't scale well. By implementing network programmability based on Application Programming Interfaces, this course will assist in overcoming issues of the future and help you develop the skills required for the Next-Generation Network Engineer.",
+        cardSubtitle:
+          "Traditional network management techniques can't be effectively automated and don't scale well. By implementing network programmability based on Application Programming Interfaces, this course will assist in overcoming issues of the future and help you develop the skills required for the Next-Generation Network Engineer.",
         url: "https://www.amazon.com/Network-Programmability-Automation-Networking-Technology/dp/1587145146/ref=sr_1_3",
-      }
+      },
     ],
   },
 ];
