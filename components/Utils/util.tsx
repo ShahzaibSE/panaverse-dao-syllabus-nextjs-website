@@ -57,7 +57,7 @@ export function SpecializedCourseContainer(props: any) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
   //
-  const { name, description } = props;
+  const { name, description, course_outline } = props;
   return (
     <Box>
       <Card w={["sm", "md"]} h={["sm", "md"]} p={10}>
@@ -86,7 +86,7 @@ export function SpecializedCourseContainer(props: any) {
         onClose={onClose}
         finalFocusRef={btnRef}
         size="full"
-        course={{ name, description }}
+        course={{ name, description, course_outline }}
       />
     </Box>
   );

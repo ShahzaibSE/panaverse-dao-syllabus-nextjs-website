@@ -20,7 +20,7 @@ import { Course } from "./model";
 import { Chrono } from "react-chrono";
 
 export default function CourseDetails(props: any) {
-  const { name, description } = props.course;
+  const { name, description, course_outline } = props.course;
 
   return (
     <>
@@ -47,7 +47,7 @@ export default function CourseDetails(props: any) {
                 <Divider py={10} />
               </Box>
             </Flex>
-            <Chrono
+            {/* <Chrono
               items={[
                 {
                   title: "May 1940",
@@ -74,7 +74,8 @@ export default function CourseDetails(props: any) {
                 },
               ]}
               mode="VERTICAL"
-            />
+            /> */}
+            <Chrono items={course_outline} mode="VERTICAL"/>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
