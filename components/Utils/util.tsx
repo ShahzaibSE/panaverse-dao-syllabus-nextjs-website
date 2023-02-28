@@ -291,12 +291,14 @@ export const speciliazed_courses: Array<Course> = [
     course_outline: [
       {
         cardTitle:
-          "Solidity Programming Essentials - Second Edition By Ritesh Modi",
-        url: "https://drive.google.com/drive/folders/1CZFxLSFoo9rl3le7KRuhUwLEV6h4xLXN?usp=sharing",
+          "Python for biologists",
+        cardSubtitle: "This course will focus on learning the basics of the Python programming language through genomics examples.",
+        url: "https://www.pythonforbiologists.org/",
       },
       {
-        cardTitle: "Solidity Learning Repo",
-        url: "https://github.com/panaverse/dapps-nextjs",
+        cardTitle: "Bioinformatics with Python",
+        cardSubtitle: "In this course we will discover modern, next-generation sequencing libraries from the powerful Python ecosystem to perform cutting-edge research and analyze large amounts of biological data.",
+        url: "https://www.amazon.com/Bioinformatics-Python-Cookbook-applications-computational/dp/1803236426/ref=sr_1_1",
       },
     ],
   },
@@ -308,18 +310,15 @@ export const speciliazed_courses: Array<Course> = [
     course_outline: [
       {
         cardTitle:
-          "Solidity Programming Essentials - Second Edition By Ritesh Modi",
-        url: "https://www.packtpub.com/product/solidity-programming-essentials-second-edition/9781803231181",
+          "NPA-351: CCNA 200-301 Certification",
+        cardSubtitle: "This course will focus on learning the basics of the networking and preparing for the new Cisco Certified Network Associate (CCNA) exam. This comprehensive course focuses on the solutions and technologies needed to implement and administer a broad range of modern networking and IT infrastructure.",
+        url: "https://www.amazon.com/CCNA-200-301-Official-Guide-Library/dp/1587147149/ref=sr_1_1",
       },
       {
-        cardTitle: "Solidity Learning Repo",
-        url: "https://github.com/panaverse/dapps-nextjs",
-      },
-      {
-        cardTitle:
-          "Introduction to the Internet of Things and Embedded Systems",
-        url: "https://docs.google.com/presentation/d/14OcW4HfS2i1Db1uKOU6SrckFEFjhSLMgfnHYB3XlEZo/edit?usp=sharing",
-      },
+        cardTitle: "NPA-361: Network Programmability and Automation",
+        cardSubtitle: "Traditional network management techniques can't be effectively automated and don't scale well. By implementing network programmability based on Application Programming Interfaces, this course will assist in overcoming issues of the future and help you develop the skills required for the Next-Generation Network Engineer.",
+        url: "https://www.amazon.com/Network-Programmability-Automation-Networking-Technology/dp/1587145146/ref=sr_1_3",
+      }
     ],
   },
 ];
