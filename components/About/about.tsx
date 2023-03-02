@@ -38,9 +38,9 @@ import {
   UnorderedList,
   Divider,
   useDisclosure,
-  Avatar
+  Avatar,
+  IconButton,
 } from "@chakra-ui/react";
-import { InfoIcon } from "@chakra-ui/icons";
 import { wrap } from "module";
 import { speciliazed_courses, SpecializedCourseContainer } from "../Utils/util";
 
@@ -125,24 +125,33 @@ export default function AboutPage() {
           },
         }}
       />
-      <Wrap direction={["column", "row"]} justify="center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          whileInView={customAnimations.zoomInAnimation}
-          transition={{ duration: 0.5 }}
-          ref={ref}
-        >
-          <WrapItem my={20}>
-            <Card>
-                <CardHeader>
-                    <CardHeader>
-                        <Avatar name="President Arif Alvi" src="assets/president-arif-alvi.jpeg" />
-                    </CardHeader>
-                </CardHeader>
-            </Card>
-          </WrapItem>
-        </motion.div>
-      </Wrap>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={customAnimations.zoomInAnimation}
+        transition={{ duration: 0.5 }}
+        ref={ref}
+      >
+        <Card size={"lg"}>
+          <Card>
+            <CardHeader>
+              <Flex>
+                <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap" justify={"center"}>
+                  <Avatar
+                    name="President Arif Alvi"
+                    src="assets/president-arif-alvi.jpeg"
+                    size={["sm","md", "lg"]}
+                  />
+                </Flex>
+              </Flex>
+            </CardHeader>
+            <CardBody>
+                <Flex>
+                    <Flex justify={"center"} flexWrap="wrap"></Flex>
+                </Flex>
+            </CardBody>
+          </Card>
+        </Card>
+      </motion.div>
     </Box>
   );
 }
