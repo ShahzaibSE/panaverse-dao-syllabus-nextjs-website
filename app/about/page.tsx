@@ -3,20 +3,14 @@ import React from "react";
 import { Card, Text, Heading, Flex, Stack, Box, Wrap } from "@chakra-ui/react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import HomePage from "@/components/Home/home";
+import AboutPage from "@/components/About/about";
 
-export default function AboutPage() {
+export default function About() {
   return (
     <Box>
-      {/* <header>
-        <Header />
-      </header> */}
       <main>
-        <HomePage />
+        <AboutPage />
       </main>
-      {/* <footer>
-        <Footer/>
-      </footer> */}
     </Box>
   );
 }
