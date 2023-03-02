@@ -115,19 +115,32 @@ export const speciliazed_courses: Array<Course> = [
       {
         cardTitle: "Blockchain and Metaverse Theory",
         url: "https://www.amazon.com/Metaverse-How-Will-Revolutionize-Everything/dp/1324092033/ref=tmm_hrd_swatch_0",
+        cardSubtitle: `
+        A blockchain is a type of distributed database or ledger—one of today’s top tech trends—which means the power to update a blockchain is distributed between the nodes, or participants, of a public or private computer network. This is known as distributed ledger technology, or DLT.
+        Nodes are incentivized with digital tokens or currency to make updates to blockchains.
+
+        The term "metaverse" was first used in Neal Stephenson's iconic cyberpunk novel Snow Crash, published in 1992. 
+        But, what is the Metaverse? The Metaverse (always capitalized in Stephenson's fiction) is described as a shared "imaginary realm" that is "made available to the public across the worldwide fiber-optics network" and projected onto virtual reality goggles in the novel.
+        Therefore, the phrase can apply to digital settings that have been enhanced with virtual reality (VR) or augmented reality (AR). 
+        `,
       },
       {
         cardTitle: "Smart Contract Development in Solidity",
         url: "https://github.com/panaverse/defi-dapps-solidity-smart-contracts",
+        cardSubtitle: `Smart contracts are simply programs stored on a blockchain that run when predetermined conditions are met. 
+        They typically are used to automate the execution of an agreement so that all participants can be immediately certain of the outcome, without any intermediary's involvement or time loss.`,
       },
       {
         cardTitle: "Dapp Development using Ethers.js and Next.js 13",
         url: "https://github.com/panaverse/dapps-nextjs",
+        cardSubtitle: `Decentralized applications or dApps have become the backbone of the growing Web3 ecosystem. 
+        From DeFi to gaming, e-commerce, social media and even enterprise, dApps have enabled numerous services, 
+        creating utility and value for Web3 users.`,
       },
       {
         cardTitle: "Tokenomics",
-        cardSubtitle:
-          "Tokenomics is an important concept to consider when making an investment decision because ultimately a project that has smart and well-designed incentives to buy and hold tokens for the long haul is more likely to outlast and do better than a project that hasn't built an ecosystem around its token. A well-built platform often translates into higher demand over time as new investors flock to the project, which, in turn, boosts prices.",
+        cardSubtitle: `Tokenomics is an important concept to consider when making an investment decision because ultimately a project that has smart and well-designed incentives to buy and hold tokens for the long haul is more likely to outlast and do better than a project that hasn't built an ecosystem around its token. 
+          A well-built platform often translates into higher demand over time as new investors flock to the project, which, in turn, boosts prices.`,
       },
       {
         cardTitle: "Blockchain Project: Create a Token and Launch ICO/IEO/IDO",
@@ -137,9 +150,14 @@ export const speciliazed_courses: Array<Course> = [
       {
         cardTitle: "Open Metaverse Web Development",
         cardSubtitle: "Open Metaverse Learning Repo",
+        cardDetailedText: `Metaverse development is still in its early stages, and many platforms are working on it. 
+        The next major thing in website development and design would be the Metaverse, a virtual reality platform. 
+        This would make it possible for designers to produce more lifelike, realistic, and engaging consumer designs. 
+        The Metaverse would enable programmers to construct more dynamic and immersive web designs. `,
         url: "https://github.com/panaverse/metaverse-web",
       },
       {
+        cardDetailedText: `you will learn how to make the created 3D model work properly in any program such as game engines. By the end of this book, you will be able to efficiently create any type of 3D asset from scratch for use in any type of situation: from still renders, to animation, to games.`,
         cardTitle:
           "Blender 3D asset Creation for the Metaverse (Remote Zoom Class)",
         cardSubtitle:
@@ -227,10 +245,18 @@ export const speciliazed_courses: Array<Course> = [
       {
         cardTitle: "Alexa Skill Developement",
         url: "https://developer.amazon.com/en-US/alexa",
+        cardSubtitle: `
+        Image result for alexa skill development
+        The Alexa Skills Kit (ASK) is a software development framework that enables you to create content, called skills. 
+        Skills are like apps for Alexa. 
+        With an interactive voice interface, Alexa gives users a hands-free way to interact with your skill.`,
       },
       {
         cardTitle: "Alexa with Matter Protocol",
         url: "https://developer.amazon.com/en-US/alexa/matter",
+        cardSubtitle: `
+        Alexa supports the following three connection options for Matter devices: You can connect your device directly to Alexa with Matter over Wi-Fi. 
+        You can connect Alexa Connect Kit (ACK) devices to Alexa with the ACK SDK for Matter. The SDK supports Matter over Wi-Fi.1`,
       },
       {
         cardTitle:
@@ -252,11 +278,13 @@ export const speciliazed_courses: Array<Course> = [
         cardTitle:
           "The C Reference Book: The C programming language Embedded Programming book: Internet of things with ESP8266",
         url: "https://drive.google.com/drive/folders/1CZFxLSFoo9rl3le7KRuhUwLEV6h4xLXN?usp=sharing",
+        cardSubtitle: `The C Programming Language is a computer programming book written by Brian Kernighan and Dennis Ritchie, the latter of whom originally designed and implemented the language, as well as co-designed the Unix operating system with which development of the language was closely intertwined.`,
       },
       {
         cardTitle:
           "The C Reference Book: The C programming language, Embedded Programming book: Internet of things with ESP8266",
         url: "https://drive.google.com/drive/folders/1CZFxLSFoo9rl3le7KRuhUwLEV6h4xLXN?usp=sharing",
+        cardSubtitle: `The C Programming Language is a computer programming book written by Brian Kernighan and Dennis Ritchie, the latter of whom originally designed and implemented the language, as well as co-designed the Unix operating system with which development of the language was closely intertwined.`,
       },
       {
         cardTitle: "Introduction to C Part 1 (Weeks 3B, 4, and 5)",
