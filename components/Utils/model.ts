@@ -13,3 +13,10 @@ export interface CourseOutline {
     cardDetailedText?: string;
     url?: string;
 }
+
+export interface AboutProfile {
+    title: string;
+    description: string;
+    imageUrl: string;
+    [x: string]:string;
+}

@@ -1,5 +1,10 @@
 "use client";
-import React, { useRef, useEffect, useCallback, useState } from "react";
+import React, {
+  useRef,
+  useEffect,
+  useCallback,
+  useState,
+} from "react";
 import {
   motion,
   useScroll,
@@ -14,35 +19,15 @@ import "react-slideshow-image/dist/styles.css";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 //
-import {
-  Box,
-  Wrap,
-  Flex,
-  Text,
-  Stack,
-  Heading,
-  Button,
-  Container,
-  Image,
-  Spacer,
-  Card,
-  CardBody,
-  CardHeader,
-  CardFooter,
-  AspectRatio,
-  WrapItem,
-  Center,
-  List,
-  ListItem,
-  ListIcon,
-  UnorderedList,
-  Divider,
-  useDisclosure,
-  Avatar,
-  IconButton,
-} from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { wrap } from "module";
-import { speciliazed_courses, SpecializedCourseContainer } from "../Utils/util";
+import {
+  speciliazed_courses,
+  SpecializedCourseContainer,
+} from "../Utils/util";
+import AboutDetails from "../Utils/aboutDetails";
+import About from "@/app/about/page";
+import { about_profile_details } from "../Utils/util";
 
 // ----- //
 /** Adding Custom animations in object */
@@ -54,29 +39,44 @@ export const customAnimations = {
 // ---- ///
 // Parallax Scroll Configuration
 /// ---- ///
-export function useParallax(value: MotionValue<number>, distance: number) {
-  return useTransform(value, [0, 1], [-distance, distance]);
+export function useParallax(
+  value: MotionValue<number>,
+  distance: number
+) {
+  return useTransform(
+    value,
+    [0, 1],
+    [-distance, distance]
+  );
 }
 
 export default function AboutPage() {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref });
+  const { scrollYProgress } = useScroll({
+    target: ref,
+  });
   const y = useParallax(scrollYProgress, 300);
   // Fade In Entrance.
   const controls = useAnimation();
   const inView = useInView(ref);
   //Particles
-  const particlesInit = useCallback(async (engine: any) => {
-    console.log(engine);
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    await loadFull(engine);
-  }, []);
+  const particlesInit = useCallback(
+    async (engine: any) => {
+      console.log(engine);
+      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+      // starting from v2 you can add only the features you need reducing the bundle size
+      await loadFull(engine);
+    },
+    []
+  );
 
-  const particlesLoaded = useCallback(async (container: any) => {
-    await console.log(container);
-  }, []);
+  const particlesLoaded = useCallback(
+    async (container: any) => {
+      await console.log(container);
+    },
+    []
+  );
 
   //
   const images = [
@@ -112,7 +112,13 @@ export default function AboutPage() {
               speed: 2,
               straight: false,
             },
-            number: { density: { enable: true, area: 800 }, value: 80 },
+            number: {
+              density: {
+                enable: true,
+                area: 800,
+              },
+              value: 80,
+            },
             opacity: {
               value: 0.5,
             },
@@ -127,30 +133,23 @@ export default function AboutPage() {
       />
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
-        whileInView={customAnimations.zoomInAnimation}
+        whileInView={
+          customAnimations.zoomInAnimation
+        }
         transition={{ duration: 0.5 }}
         ref={ref}
       >
-        <Card size={"lg"}>
-          <Card>
-            <CardHeader>
-              <Flex>
-                <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap" justify={"center"}>
-                  <Avatar
-                    name="President Arif Alvi"
-                    src="assets/president-arif-alvi.jpeg"
-                    size={["sm","md", "lg"]}
-                  />
-                </Flex>
-              </Flex>
-            </CardHeader>
-            <CardBody>
-                <Flex>
-                    <Flex justify={"center"} flexWrap="wrap"></Flex>
-                </Flex>
-            </CardBody>
-          </Card>
-        </Card>
+        <Box>
+          <AboutDetails
+            title={about_profile_details[0].title}
+            description={
+              about_profile_details[0].description
+            }
+            imageUrl={
+              about_profile_details[0].imageUrl
+            }
+          />
+        </Box>
       </motion.div>
     </Box>
   );

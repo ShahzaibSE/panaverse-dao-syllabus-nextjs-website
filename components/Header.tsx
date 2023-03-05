@@ -46,7 +46,7 @@ export default function Header() {
             >
               {CTA}
             </Button>
-            <MobileDrawer />
+            <MobileDrawer/>
           </HStack>
         </Flex>
       </motion.div>

@@ -13,9 +13,11 @@ import {
   Link,
 } from "@chakra-ui/react";
 import {HamburgerIcon} from "@chakra-ui/icons";
+import NextLink from "next/link";
+import { transformText } from "./Utils/util";
 
 export default function MobileDrawer() {
-  const data = ["About", "Contact Us", "Web3"];
+  const data = ["about", "contact", "course"];
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef<any>();
   return (
@@ -27,8 +29,8 @@ export default function MobileDrawer() {
       <DrawerBase isOpen={isOpen} onClose={onClose} finalFocusRef={btnRef}>
         <VStack alignItems="left">
           {data.map((item, i) => (
-            <Link key={i}>
-              <Button variant="text"> {item} </Button>
+            <Link key={i} as={NextLink} href={`/${item}`} onClick={onClose}>
+              <Button variant="text"> {transformText(item)} </Button>
             </Link>
           ))}
         </VStack>

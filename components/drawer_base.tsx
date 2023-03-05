@@ -10,10 +10,12 @@ import {
   DrawerContent,
   DrawerCloseButton,
   Flex,
-  Text,
   Image,
   Center,
+  Link
 } from "@chakra-ui/react";
+import NextLink from "next/link";
+
 
 export default function DrawerBase({
   placement = "right",
@@ -24,6 +26,7 @@ export default function DrawerBase({
   btnRef,
   title = "Menu",
   footer,
+  data
 }: any) {
   const p = 15;
   return (
@@ -40,10 +43,12 @@ export default function DrawerBase({
           <DrawerHeader my={p}>
             {/* <Text as="p"> {title} </Text> */}
             <Center>
+            <Link as={NextLink} href="/">
               <Image
                 src="assets/panaverse-logo/panaverse_transparent_small.png"
                 alt="Panaverse DAO"
               />
+              </Link>
             </Center>
           </DrawerHeader>
           <DrawerBody>{children}</DrawerBody>

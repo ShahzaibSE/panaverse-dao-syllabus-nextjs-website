@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import {
+  Box,
   Flex,
   Text,
   Heading,
@@ -13,8 +14,10 @@ import {
   CardFooter,
   Avatar,
 } from "@chakra-ui/react";
+import { AboutProfile } from "./model";
 
-export default function AboutDetails() {
+export default function AboutDetails(props: any) {
+  const { title, description, imageUrl } = props;
   return (
     <Card size={"lg"}>
       <Card>
@@ -26,18 +29,38 @@ export default function AboutDetails() {
               alignItems="center"
               flexWrap="wrap"
               justify={"center"}
+              px={10} pt={10}
             >
               <Avatar
-                name="President Arif Alvi"
-                src="assets/president-arif-alvi.jpeg"
-                size={["sm", "md", "lg"]}
+                name={title}
+                src={imageUrl}
+                size="2xl"
               />
             </Flex>
           </Flex>
         </CardHeader>
         <CardBody>
-          <Flex>
-            <Flex justify={"center"} flexWrap="wrap"></Flex>
+          <Flex
+            justify={"center"}
+            flexWrap="wrap"
+            align={"center"}
+            direction={["column", "row"]}
+          >
+            <Box px={10} pt={5} pb={10}>
+              <Container>
+                <Text
+                  fontSize={[
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                  ]}
+                  textAlign="justify"
+                >
+                  {description}
+                </Text>
+              </Container>
+            </Box>
           </Flex>
         </CardBody>
       </Card>
