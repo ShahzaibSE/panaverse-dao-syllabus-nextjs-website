@@ -28,7 +28,7 @@ import {
 import AboutDetails from "../Utils/aboutDetails";
 import About from "@/app/about/page";
 import { about_profile_details } from "../Utils/util";
-
+import Slider from "react-slick";
 // ----- //
 /** Adding Custom animations in object */
 // ----- //
@@ -49,8 +49,23 @@ export function useParallax(
     [-distance, distance]
   );
 }
+//
+// Settings for the slider
+const settings = {
+  dots: true,
+  arrows: true,
+  fade: true,
+  infinite: true,
+  autoplay: true,
+  speed: 500,
+  autoplaySpeed: 5000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
 
 export default function AboutPage() {
+  const [slider, setSlider] =
+    useState<Slider | null>(null);
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -77,12 +92,12 @@ export default function AboutPage() {
     },
     []
   );
-
-  //
-  const images = [
-    "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-    "https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80",
-    "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+  // Carousal Data.
+  // These are the images used in the slide
+  const cards = [
+    "https://images.unsplash.com/photo-1612852098516-55d01c75769a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
+    "https://images.unsplash.com/photo-1627875764093-315831ac12f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
+    "https://images.unsplash.com/photo-1571432248690-7fd6980a1ae2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
   ];
   //
   // useEffect(() => {

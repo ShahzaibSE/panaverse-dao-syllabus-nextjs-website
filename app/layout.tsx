@@ -14,7 +14,11 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import React, { useRef, useEffect, useCallback } from "react";
+import React, {
+  useRef,
+  useEffect,
+  useCallback,
+} from "react";
 
 // ---- ///
 // Parallax Scroll Configuration
@@ -36,7 +40,7 @@ export default function RootLayout({
           <header>
             <Header />
           </header>
-          {children}
+          <main>{children}</main>
           <footer>
             <Footer />
           </footer>

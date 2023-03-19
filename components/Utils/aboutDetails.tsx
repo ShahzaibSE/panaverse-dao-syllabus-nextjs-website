@@ -19,8 +19,8 @@ import { AboutProfile } from "./model";
 export default function AboutDetails(props: any) {
   const { title, description, imageUrl } = props;
   return (
-    <Card size={"lg"}>
-      <Card>
+    // <Card size={"lg"}>
+      <Card size={"lg"}>
         <CardHeader>
           <Flex>
             <Flex
@@ -64,6 +64,6 @@ export default function AboutDetails(props: any) {
           </Flex>
         </CardBody>
       </Card>
-    </Card>
+    // </Card>
   );
 }

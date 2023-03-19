@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useEffect, useCallback } from "react";
+import { useRouter } from "next/navigation";
 import {
   motion,
   useScroll,
@@ -74,6 +75,7 @@ export function useParallax(value: MotionValue<number>, distance: number) {
 }
 
 export default function HomePage() {
+  const router = useRouter();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 300);
@@ -198,8 +200,9 @@ export default function HomePage() {
                     colorScheme="green"
                     size={["md", "lg"]}
                     rightIcon={<InfoIcon />}
+                    onClick={()=>router.push("/course")}
                   >
-                    Explore Course
+                    Explore Courses
                   </Button>
                 </motion.div>
               </Container>
