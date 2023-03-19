@@ -20,7 +20,7 @@ export default function AboutDetails(props: any) {
   const { title, description, imageUrl } = props;
   return (
     // <Card size={"lg"}>
-      <Card size={"lg"}>
+      <Card size={"lg"} mx={10}>
         <CardHeader>
           <Flex>
             <Flex
@@ -46,7 +46,7 @@ export default function AboutDetails(props: any) {
             align={"center"}
             direction={["column", "row"]}
           >
-            <Box px={10} pt={5} pb={10}>
+            <Box pt={5} pb={10}>
               <Container>
                 <Text
                   fontSize={[
