@@ -429,14 +429,14 @@ export const about_profile_details: Array<AboutProfile> =
     Pakistan Association of Orthodontists (2005).`,
       imageUrl: "assets/president-arif-alvi.jpeg",
     },
-    // {
-    //   title: "Chairman Zia Khan",
-    //   description: `CEO of Panacloud, the world’s first Integrated API Ownership Economy, Crowdfunding, and Development Platform. Volunteer COO of PIAIC, an initiative by the President of Pakistan for AI and computing mass education. 
-    //   Mentor and software developer with 20+ years of expertise in cloud and serverless computing, software design, project management, and API and App development. 
-    //   Expert in concept, business modeling & strategy development for startups, specializing in DeFi and token economics. 
-    //   Mentored and trained hundreds of thousands of developers. 
-    //   Triple masters degrees in business administration, engineering, and finance from Arizona State University. Master in Economics from KU. 
-    //   Certified Public Accountant and Certified Management Accountant in USA.`,
-    //   imageUrl: "assets/zia-khan.jpeg",
-    // },
+    {
+      title: "Chairman Zia Khan",
+      description: `CEO of Panacloud, the world’s first Integrated API Ownership Economy, Crowdfunding, and Development Platform. Volunteer COO of PIAIC, an initiative by the President of Pakistan for AI and computing mass education. 
+      Mentor and software developer with 20+ years of expertise in cloud and serverless computing, software design, project management, and API and App development. 
+      Expert in concept, business modeling & strategy development for startups, specializing in DeFi and token economics. 
+      Mentored and trained hundreds of thousands of developers. 
+      Triple masters degrees in business administration, engineering, and finance from Arizona State University. Master in Economics from KU. 
+      Certified Public Accountant and Certified Management Accountant in USA.`,
+      imageUrl: "assets/zia-khan.jpeg",
+    },
   ];

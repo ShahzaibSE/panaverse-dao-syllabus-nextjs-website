@@ -20,7 +20,7 @@ export default function AboutDetails(props: any) {
   const { title, description, imageUrl } = props;
   return (
     // <Card size={"lg"}>
-      <Card size={"lg"} mx={10}>
+      <Card size={"lg"} mx={10} my={10}>
         <CardHeader>
           <Flex>
             <Flex

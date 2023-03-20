@@ -19,7 +19,7 @@ import "react-slideshow-image/dist/styles.css";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 //
-import { Box } from "@chakra-ui/react";
+import { Box, Flex, Spacer } from "@chakra-ui/react";
 import { wrap } from "module";
 import {
   speciliazed_courses,
@@ -29,6 +29,7 @@ import AboutDetails from "../Utils/aboutDetails";
 import About from "@/app/about/page";
 import { about_profile_details } from "../Utils/util";
 import Slider from "react-slick";
+import { AboutProfile } from "../Utils/model";
 // ----- //
 /** Adding Custom animations in object */
 // ----- //
@@ -154,7 +155,35 @@ export default function AboutPage() {
         transition={{ duration: 0.5 }}
         ref={ref}
       >
-        <Box>
+        <Flex
+          justify={"space-around"}
+          direction={["column", "row"]}
+        >
+          {about_profile_details.map(
+            (
+              about_profile_details: AboutProfile,
+              index: number
+            ) => {
+              return (
+                <Box key={index}>
+                  <AboutDetails
+                    key={index}
+                    title={
+                      about_profile_details.title
+                    }
+                    description={
+                      about_profile_details.description
+                    }
+                    imageUrl={
+                      about_profile_details.imageUrl
+                    }
+                  />
+                </Box>
+              );
+            }
+          )}
+        </Flex>
+        {/* <Box>
           <AboutDetails
             title={about_profile_details[0].title}
             description={
@@ -164,7 +193,7 @@ export default function AboutPage() {
               about_profile_details[0].imageUrl
             }
           />
-        </Box>
+        </Box> */}
       </motion.div>
     </Box>
   );
