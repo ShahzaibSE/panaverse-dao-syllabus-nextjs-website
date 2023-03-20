@@ -15,6 +15,7 @@ const CTA = "Apply";
 
 export default function Header() {
   const data = ["about", "contact", "course"];
+  const router = useRouter();
   return (
     <chakra.header id="header">
       <motion.div
@@ -39,6 +40,7 @@ export default function Header() {
             ))}
           </HStack>
           <HStack>
+            <Link href="https://www.piaic.org/" target={"_blank"}>
             <Button
               size={["sm", "md", "lg"]}
               colorScheme="telegram"
@@ -46,6 +48,7 @@ export default function Header() {
             >
               {CTA}
             </Button>
+            </Link>
             <MobileDrawer/>
           </HStack>
         </Flex>
