@@ -7,9 +7,15 @@ import {
   Text,
   useColorModeValue,
   VisuallyHidden,
-  Image, HStack
+  Image,
+  HStack,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaYoutube, FaFacebook } from "react-icons/fa";
+import {
+  FaGithub,
+  FaTwitter,
+  FaYoutube,
+  FaFacebook,
+} from "react-icons/fa";
 import { ReactNode } from "react";
 
 // const Logo = (props: any) => {
@@ -35,8 +41,26 @@ import { ReactNode } from "react";
 const Logo = (props: any) => {
   return (
     <HStack pt={20}>
-      <Box><Text fontSize={['xs','sm', 'md', 'lg', 'xl']}>Powered by</Text></Box>
-      <Box><Image h={[30, 40, 50]} src="assets/panacloud-logo.png" alt="Panaverse DAO"/></Box>
+      <Box>
+        <Text
+          fontSize={[
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ]}
+        >
+          Powered by
+        </Text>
+      </Box>
+      <Box>
+        <Image
+          h={[30, 40, 50]}
+          src="assets/panacloud-logo.png"
+          alt="Panaverse DAO"
+        />
+      </Box>
     </HStack>
   );
 };
@@ -52,7 +76,10 @@ const SocialButton = ({
 }) => {
   return (
     <chakra.button
-      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+      bg={useColorModeValue(
+        "blackAlpha.100",
+        "whiteAlpha.100"
+      )}
       rounded={"full"}
       w={8}
       h={8}
@@ -64,7 +91,10 @@ const SocialButton = ({
       justifyContent={"center"}
       transition={"background 0.3s ease"}
       _hover={{
-        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
+        bg: useColorModeValue(
+          "blackAlpha.200",
+          "whiteAlpha.200"
+        ),
       }}
     >
       <VisuallyHidden>{label}</VisuallyHidden>
@@ -76,9 +106,20 @@ const SocialButton = ({
 export default function Footer() {
   return (
     <Box
-      style={{ position: "relative", bottom: "0px", left: "0px", right: "0px" }}
-      bg={useColorModeValue("black.50", "black.900")}
-      color={useColorModeValue("black.700", "black.200")}
+      style={{
+        position: "relative",
+        bottom: "0px",
+        left: "0px",
+        right: "0px",
+      }}
+      bg={useColorModeValue(
+        "black.50",
+        "black.900"
+      )}
+      color={useColorModeValue(
+        "black.700",
+        "black.200"
+      )}
       mt={20}
     >
       <Container
@@ -101,26 +142,69 @@ export default function Footer() {
       <Box
         borderTopWidth={1}
         borderStyle={"solid"}
-        borderColor={useColorModeValue("black.200", "black.700")}
+        borderColor={useColorModeValue(
+          "black.200",
+          "black.700"
+        )}
       >
         <Container
           as={Stack}
           maxW={"6xl"}
           py={4}
-          direction={{ base: "column", md: "row" }}
+          direction={{
+            base: "column",
+            md: "row",
+          }}
           spacing={4}
-          justify={{ base: "center", md: "space-between" }}
+          justify={{
+            base: "center",
+            md: "space-between",
+          }}
           align={{ base: "center", md: "center" }}
         >
-          <Text fontSize={["xs",'sm', 'md', 'lg', 'xl']}>© 2023 Panaverse DAO. All rights reserved</Text>
+          <Text
+            fontSize={[
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]}
+          >
+            © 2023 Panaverse DAO. All rights
+            reserved
+          </Text>
           <Stack direction={"row"} spacing={6}>
-            <SocialButton label={"Twitter"} href={"https://twitter.com/Panaverse_edu"}>
+            <SocialButton
+              label={"Github"}
+              href={
+                "https://github.com/panaverse"
+              }
+            >
+              <FaGithub />
+            </SocialButton>
+            <SocialButton
+              label={"Twitter"}
+              href={
+                "https://twitter.com/Panaverse_edu"
+              }
+            >
               <FaTwitter />
             </SocialButton>
-            <SocialButton label={"YouTube"} href={"https://www.youtube.com/@panaverse"}>
+            <SocialButton
+              label={"YouTube"}
+              href={
+                "https://www.youtube.com/@panaverse"
+              }
+            >
               <FaYoutube />
             </SocialButton>
-            <SocialButton label={"Facebook"} href={"https://www.facebook.com/panaverse.dao"}>
+            <SocialButton
+              label={"Facebook"}
+              href={
+                "https://www.facebook.com/panaverse.dao"
+              }
+            >
               <FaFacebook />
             </SocialButton>
           </Stack>
