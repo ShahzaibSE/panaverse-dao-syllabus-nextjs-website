@@ -143,7 +143,7 @@ export default function CoursePage() {
           },
         }}
       />
-      <Wrap direction={["column", "row"]} justify="center">
+      <Wrap direction={["column", "row"]} justify="center" align={"center"}>
         {speciliazed_courses.map((speciliazed_course: any, index: number) => (
           <motion.div
             key={index}
@@ -152,7 +152,7 @@ export default function CoursePage() {
             transition={{ duration: 0.5 }}
             ref={ref}
           >
-            <WrapItem key={index} my={20}>
+            <WrapItem key={index} my={20} mx={[5]}>
               <SpecializedCourseContainer
                 key={index}
                 name={speciliazed_course.name}

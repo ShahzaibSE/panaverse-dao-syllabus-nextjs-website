@@ -17,7 +17,7 @@ import NextLink from "next/link";
 import { transformText } from "./Utils/util";
 
 export default function MobileDrawer() {
-  const data = ["about", "contact", "course"];
+  const data = ["about", "course"];
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef<any>();
   return (
